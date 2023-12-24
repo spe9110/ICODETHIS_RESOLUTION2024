@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Icodemas 23</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+	</head>
+	<body>
+		<a href="#content" class="sr-only">skip to content</a>
+		<header id="header">
+			<div class="discount to-close">
+				<span>Use code "XMAS" for 20% discount at checkout.</span>
+				<button class="close-button">
+					<svg class="icon" width="24" height="24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M18 6l-12 12"></path>
+						<path d="M6 6l12 12"></path>
+					</svg>
+					<span>close</span>
+				</button>
+			</div>
+			<div class="main-header">
+				<div class="logo-search">
+					<h1>
+						<div class="logo">iCodeMas</div>
+					</h1>
+					<form class="search">
+						<label class="sr-only" for="search">Search</label>
+						<input type="search" id="search" placeholder="Search" minlength="3" required />
+						<button>
+							<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+								<path d="M21 21l-6 -6" />
+							</svg>
+						</button>
+					</form>
+				</div>
+				<nav>
+					<ul>
+						<li>
+							<a href="#featured">Featured</a>
+						</li>
+						<li>
+							<a href="#shop">Shop</a>
+						</li>
+						<li>
+							<a href="#faq">FAQ</a>
+						</li>
+						<li>
+							<button class="cart-button" aria-controls="cart">
+								<span class="sr-only">Cart</span>
+								<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" />
+									<path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+								</svg>
+								<span class="cart-quantity">0</span>
+							</button>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main id="content">
+			<section id="results" hidden>
+				<button type="button" class="search-close-button">
+					<svg class="icon" width="24" height="24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M18 6l-12 12"></path>
+						<path d="M6 6l12 12"></path>
+					</svg>
+					<span>close</span>
+				</button>
+				<h2>Search result for "<span></span>"</h2>
+				<h3 class="products-header">Products</h3>
+				<div class="products-options">
+					<div class="products-display-buttons">
+						<button title="list" class="list" aria-pressed="true" aria-controls="resluts">
+							<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M9 6l11 0" />
+								<path d="M9 12l11 0" />
+								<path d="M9 18l11 0" />
+								<path d="M5 6l0 .01" />
+								<path d="M5 12l0 .01" />
+								<path d="M5 18l0 .01" />
+							</svg>
+							<span class="sr-only">list</span>
+						</button>
+						<button title="grid" class="grid" aria-pressed="false" aria-controls="resluts">
+							<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M5 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+								<path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+								<path d="M19 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+								<path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+								<path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+								<path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+								<path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+								<path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+								<path d="M19 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+							</svg>
+							<span class="sr-only">grid</span>
+						</button>
+						<button title="details" class="details" aria-pressed="false" aria-controls="results">
+							<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+								<path d="M14 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+								<path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+								<path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+							</svg>
+							<span class="sr-only">details</span>
+						</button>
+					</div>
+				</div>
+				<ul class="products list"></ul>
+				<h3 class="faq-header">FAQ</h3>
+				<ul class="faq"></ul>
+			</section>
+			<section id="benefits">
+				<ul>
+					<li>
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="64" height="64" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M12 3l8 4.5v9l-8 4.5l-8 -4.5v-9l8 -4.5" />
+							<path d="M12 12l8 -4.5" />
+							<path d="M8.2 9.8l7.6 -4.6" />
+							<path d="M12 12v9" />
+							<path d="M12 12l-8 -4.5" />
+						</svg>
+						<div>
+							<p><strong>Free shipping</strong></p>
+							<p>Free shipping on all orders over $19.99</p>
+						</div>
+					</li>
+					<li>
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="64" height="64" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M7 9m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" />
+							<path d="M14 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+							<path d="M17 9v-2a2 2 0 0 0 -2 -2h-10a2 2 0 0 0 -2 2v6a2 2 0 0 0 2 2h2" />
+						</svg>
+						<div>
+							<p><strong>Money back guarantee</strong></p>
+							<p>Within 30 days of purchase</p>
+						</div>
+					</li>
+					<li>
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="64" height="64" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M4 14v-3a8 8 0 1 1 16 0v3" />
+							<path d="M18 19c0 1.657 -2.686 3 -6 3" />
+							<path d="M4 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3z" />
+							<path d="M15 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3z" />
+						</svg>
+						<div>
+							<p><strong>Online support</strong></p>
+							<p>Our online support is here for you</p>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section id="featured">
+				<h2>Featured Products</h2>
+				<p>Discover the magic of the season with our handpicked Featured Products. From enchanting decorations to delightful gifts, these curated items are sure to add a touch of joy to your festive celebrations.</p>
+				<nav>
+					<ul class="products"></ul>
+				</nav>
+				<div id="display" class="products details">
+					<div class="product" data-product-id="0">
+						<div class="image" title="new">
+							<button class="add-to-cart">
+								<span>Add to cart</span>
+								<svg class="icon" width="23" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M-1 0h24v24H0z" fill="none"></path>
+									<path d="M5.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z"></path>
+									<path d="M8 11v-5a3 3 0 0 1 6 0v5"></path>
+								</svg>
+							</button>
+						</div>
+						<div class="name-price-description">
+							<h3 class="name"></h3>
+							<div class="price"></div>
+							<div class="stars" title="">
+								<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" stroke-width="0" fill="currentColor"></path></svg><svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" stroke-width="0" fill="currentColor"></path></svg><svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a.993 .993 0 0 1 .823 .443l.067 .116l2.852 5.781l6.38 .925c.741 .108 1.08 .94 .703 1.526l-.07 .095l-.078 .086l-4.624 4.499l1.09 6.355a1.001 1.001 0 0 1 -1.249 1.135l-.101 -.035l-.101 -.046l-5.693 -3l-5.706 3c-.105 .055 -.212 .09 -.32 .106l-.106 .01a1.003 1.003 0 0 1 -1.038 -1.06l.013 -.11l1.09 -6.355l-4.623 -4.5a1.001 1.001 0 0 1 .328 -1.647l.113 -.036l.114 -.023l6.379 -.925l2.853 -5.78a.968 .968 0 0 1 .904 -.56zm0 3.274v12.476a1 1 0 0 1 .239 .029l.115 .036l.112 .05l4.363 2.299l-.836 -4.873a1 1 0 0 1 .136 -.696l.07 -.099l.082 -.09l3.546 -3.453l-4.891 -.708a1 1 0 0 1 -.62 -.344l-.073 -.097l-.06 -.106l-2.183 -4.424z" stroke-width="0" fill="currentColor"></path></svg><svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path></svg><svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path></svg>
+							</div>
+							<div class="description"></div>
+							<button class="add-to-cart">
+								<span>Add to cart</span>
+								<svg class="icon" width="23" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M-1 0h24v24H0z" fill="none"></path>
+									<path d="M5.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z"></path>
+									<path d="M8 11v-5a3 3 0 0 1 6 0v5"></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="shop">
+				<h2>Shop</h2>
+				<div class="cards">
+					<div class="card">
+						<img width="636" height="360" src="https://icodethis.com/images/iCodeMas/promo_1.png" alt="Santa and his firends in a red car." />
+						<div>
+							<hgroup>
+								<p>Christmas collection</p>
+								<h3>Shop collection now</h3>
+							</hgroup>
+							<button class="to-products">
+								<span class="sr-only">Scroll to products</span>
+								<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M12 5l0 14" />
+									<path d="M18 13l-6 6" />
+									<path d="M6 13l6 6" />
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="card">
+						<img width="636" height="360" src="https://icodethis.com/images/iCodeMas/promo_2.png" alt="The snowy peaks of Christmas trees, with Santa's sleigh flying above them." />
+						<div>
+							<hgroup>
+								<p>Gift card</p>
+								<h3>Share the spirit with our Gift Cards</h3>
+							</hgroup>
+							<button class="open-giftcard-modal">
+								<span>Get Gift</span>
+								<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M5 12l14 0"></path>
+									<path d="M13 18l6 -6"></path>
+									<path d="M13 6l6 6"></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="products-options">
+					<div class="products-display-buttons">
+						<button title="list" class="list" aria-pressed="false" aria-controls="products">
+							<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M9 6l11 0" />
+								<path d="M9 12l11 0" />
+								<path d="M9 18l11 0" />
+								<path d="M5 6l0 .01" />
+								<path d="M5 12l0 .01" />
+								<path d="M5 18l0 .01" />
+							</svg>
+							<span class="sr-only">list</span>
+						</button>
+						<button title="grid" class="grid" aria-pressed="true" aria-controls="products">
+							<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M5 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+								<path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+								<path d="M19 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+								<path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+								<path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+								<path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+								<path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+								<path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+								<path d="M19 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+							</svg>
+							<span class="sr-only">grid</span>
+						</button>
+						<button title="details" class="details" aria-pressed="false" aria-controls="products">
+							<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+								<path d="M14 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+								<path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+								<path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+							</svg>
+							<span class="sr-only">details</span>
+						</button>
+					</div>
+					<div id="sortby-wrapper">
+						<label class="sr-only" for="sortby">Sort by</label>
+						<select id="sortby">
+							<option value="recent">Most recent</option>
+							<option value="recommended">Recommended</option>
+							<option value="popular">Popular</option>
+							<option value="price-asc">Price low to high</option>
+							<option value="price-desc">Price high to low</option>
+							<option value="sales">Sales</option>
+							<option value="name">Product name</option>
+						</select>
+					</div>
+				</div>
+				<div id="products">
+					<div class="products-pagination">
+						<ul class="products grid"></ul>
+						<div class="pagination"></div>
+					</div>
+					<aside id="filters" aria-expanded="false">
+						<button type="button" class="filters-button" aria-controls="filters">filters</button>
+						<button class="close-button">
+							<svg class="icon" width="24" height="24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M18 6l-12 12"></path>
+								<path d="M6 6l12 12"></path>
+							</svg>
+							<span>close</span>
+						</button>
+						<form>
+							<h3>Filters</h3>
+						</form>
+					</aside>
+				</div>
+			</section>
+			<section id="faq">
+				<h2>Frequently Asked Questions</h2>
+				<p>Have questions? Exprolore our Frequently Asked Questions section for quick answers.</p>
+				<p>If your question isn't answered, feel free to reach out to our helpful support team.</p>
+				<ul class="faq"></ul>
+			</section>
+			<section id="newsletter">
+				<hgroup>
+					<h2>Subscribe to our newsletter</h2>
+					<p>Stay in the loop with the latest festive trends and exclusive offers by subscribing to our newsletter.</p>
+				</hgroup>
+				<form>
+					<input type="email" id="email-newsletter" placeholder=" " required />
+					<label for="email-newsletter">Enter your email</label>
+					<button>Subscribe</button>
+				</form>
+			</section>
+		</main>
+		<aside id="cart" aria-expanded="false">
+			<button class="close-button">
+				<svg class="icon" width="24" height="24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M18 6l-12 12"></path>
+					<path d="M6 6l12 12"></path>
+				</svg>
+				<span>close</span>
+			</button>
+			<h2>Your cart</h2>
+			<ul class="products"></ul>
+			<div class="subtotal-checkout-button">
+				<dl>
+					<dt>Subtotal</dt>
+					<dd></dd>
+				</dl>
+				<button class="checkout-button">
+					<span>Proceed to checkout</span>
+					<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M5 12l14 0" />
+						<path d="M13 18l6 -6" />
+						<path d="M13 6l6 6" />
+					</svg>
+				</button>
+			</div>
+		</aside>
+		<aside id="chat" class="chat" aria-expanded="false">
+			<button class="close-button">
+				<svg class="icon" width="24" height="24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M18 6l-12 12"></path>
+					<path d="M6 6l12 12"></path>
+				</svg>
+				<span>close</span>
+			</button>
+			<hgroup>
+				<h2>Virtual assistant</h2>
+				<p>Our virtual assistant is ready to assist you, making your online experience seamless and enjoyable</p>
+			</hgroup>
+			<div class="all-messages"></div>
+			<form class="new-message">
+				<input type="text" name="chat-input" placeholder="What can I help you with?" required />
+				<button class="send-message">
+					<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M10 14l11 -11" />
+						<path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" />
+					</svg>
+					<span class="sr-only">Send message</span>
+				</button>
+			</form>
+		</aside>
+		<button class="chat-open-button" aria-controls="chat">
+			<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4" />
+				<path d="M12 11l0 .01" />
+				<path d="M8 11l0 .01" />
+				<path d="M16 11l0 .01" />
+			</svg>
+			<span>Virtual assistant</span>
+		</button>
+		<footer id="footer">
+			<div class="logo-text-menu">
+				<div class="logo-text">
+					<div class="logo">iCodeMas</div>
+					<div class="text">
+						<p>At iCodeMas, we believe in spreading joy, creating memories, and making every moment magical.</p>
+						<p>Embrace the spirit of iCodeMas and make your holidays merry and bright!</p>
+					</div>
+				</div>
+				<nav>
+					<div>
+						<h2>Products</h2>
+						<ul class="product-categories"></ul>
+					</div>
+					<div>
+						<h2>Client</h2>
+						<ul>
+							<li><a href="javascript:void(0)">Find a store</a></li>
+							<li><a href="#newsletter">Newsletter</a></li>
+							<li><a href="javascript:void(0)">Cookies Policy</a></li>
+						</ul>
+					</div>
+					<div>
+						<h2>About</h2>
+						<ul>
+							<li><a href="javascript:void(0)">Find a store</a></li>
+							<li><a href="javascript:void(0)">Return policy</a></li>
+							<li><a href="javascript:void(0)">Contact</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="copyright">&copy;2023 iCodeThis. All Rights Reserved.</div>
+		</footer>
+		<dialog id="giftcard">
+			<form>
+				<button type="button" class="close-button" formmethod="dialog">
+					<svg class="icon" width="24" height="24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M18 6l-12 12"></path>
+						<path d="M6 6l12 12"></path>
+					</svg>
+					<span>close</span>
+				</button>
+				<hgroup>
+					<h2>Gift the you of choice</h2>
+					<p>Show them you care with a gift they'll love. With an online gift card, they can choose from a wide selection of products.</p>
+				</hgroup>
+				<fieldset id="giftcard-value">
+					<button type="button">-</button>
+					<input id="giftcard-value-input" type="text" inputmode="numeric" value="$25" />
+					<button type="button">+</button>
+				</fieldset>
+				<fieldset id="giftcard-options">
+					<button type="button" value="$25" aria-pressed="true" aria-controls="#giftcard-value-input">$25</button>
+					<button type="button" value="$50" aria-pressed="false" aria-controls="#giftcard-value-input">$50</button>
+					<button type="button" value="$75" aria-pressed="false" aria-controls="#giftcard-value-input">$75</button>
+					<button type="button" value="$100" aria-pressed="false" aria-controls="#giftcard-value-input">$100</button>
+					<button type="button" value="$200" aria-pressed="false" aria-controls="#giftcard-value-input">$200</button>
+					<button type="button" value="$300" aria-pressed="false" aria-controls="#giftcard-value-input">$300</button>
+				</fieldset>
+				<button class="add-to-cart">
+					<span>Add to cart</span>
+					<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z"></path>
+						<path d="M9 11v-5a3 3 0 0 1 6 0v5"></path>
+					</svg>
+				</button>
+			</form>
+		</dialog>
+		<dialog id="checkout">
+			<form>
+				<button type="button" class="close-button" formmethod="dialog">
+					<svg class="icon" width="24" height="24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M18 6l-12 12"></path>
+						<path d="M6 6l12 12"></path>
+					</svg>
+					<span>close</span>
+				</button>
+				<fieldset>
+					<legend>Contact info</legend>
+					<div>
+						<label for="order-email">Email</label>
+						<input id="order-email" type="email" required />
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Shipping info</legend>
+					<div>
+						<label for="order-name">Name</label>
+						<input id="order-name" minlength="3" required />
+					</div>
+					<div>
+						<label for="order-country">Country / Region</label>
+						<input id="order-country" required />
+					</div>
+					<div>
+						<label for="order-address">Address</label>
+						<input id="order-address" minlength="5" required />
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Payment info</legend>
+					<fieldset class="payment-method">
+						<legend class="sr-only">Payment method</legend>
+						<div>
+							<input id="payment-card" type="radio" name="payment" value="card" checked />
+							<label for="payment-card">
+								<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
+									<path d="M3 10l18 0" />
+									<path d="M7 15l.01 0" />
+									<path d="M11 15l2 0" />
+								</svg>
+								<span>Card</span>
+							</label>
+						</div>
+						<div>
+							<input id="payment-cash" type="radio" name="payment" value="cash" />
+							<label for="payment-cash">
+								<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" />
+									<path d="M20 12v4h-4a2 2 0 0 1 0 -4h4" />
+								</svg>
+								<span>Cash on delivery</span>
+							</label>
+						</div>
+						<div>
+							<input id="payment-paypal" type="radio" name="payment" value="paypal" />
+							<label for="payment-paypal">
+								<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M10 13l2.5 0c2.5 0 5 -2.5 5 -5c0 -3 -1.9 -5 -5 -5h-5.5c-.5 0 -1 .5 -1 1l-2 14c0 .5 .5 1 1 1h2.8l1.2 -5c.1 -.6 .4 -1 1 -1zm7.5 -5.8c1.7 1 2.5 2.8 2.5 4.8c0 2.5 -2.5 4.5 -5 4.5h-2.6l-.6 3.6a1 1 0 0 1 -1 .8l-2.7 0a.5 .5 0 0 1 -.5 -.6l.2 -1.4" />
+								</svg>
+								<span>PayPal</span>
+							</label>
+						</div>
+					</fieldset>
+					<fieldset id="card-details" class="details">
+						<div>
+							<label for="payment-card-number">Card number</label>
+							<input id="payment-card-number" required />
+						</div>
+						<div class="columns">
+							<div>
+								<label for="payment-card-expiry">Expiry date</label>
+								<input id="payment-card-expiry" />
+							</div>
+							<div>
+								<label for="payment-card-cvc">CVC</label>
+								<input id="payment-card-cvc" required />
+							</div>
+						</div>
+					</fieldset>
+					<div id="cash-details" class="details" hidden>
+						<p>You will pay for your order when collecting your delivery.</p>
+					</div>
+					<fieldset id="paypal-details" class="details" hidden>
+						<div>
+							<label for="payment-paypal-login">Email or mobile number</label>
+							<input id="payment-paypal-login" required />
+						</div>
+						<div>
+							<label for="payment-paypal-password">Password</label>
+							<input type="password" id="payment-paypal-password" required />
+						</div>
+					</fieldset>
+					<button class="order-button">Place order</button>
+				</fieldset>
+			</form>
+		</dialog>
+		<dialog id="thankyou">
+			<form class="thankyou">
+				<button type="button" class="close-button" formmethod="dialog">
+					<svg class="icon" width="24" height="24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M18 6l-12 12"></path>
+						<path d="M6 6l12 12"></path>
+					</svg>
+					<span>close</span>
+				</button>
+				<img src="https://icodethis.com/images/iCodeMas/tiny_santa.png" alt="Santa Klaus" />
+				<h2>Thank you for your purchase</h2>
+				<p>Your support means the world to us. As a small business, every order makes a big difference. We appreciate you!</p>
+			</form>
+			<div class="feedback-section">
+				<p>Enjoyed your experience? Please take a moment to rate us. <br />Your feedback ensures we continue delivering exceptional service.</p>
+				<button>Give feedback</button>
+			</div>
+			<canvas></canvas>
+		</dialog>
+		<dialog id="feedback">
+			<form>
+				<button type="button" class="close-button" formmethod="dialog">
+					<svg class="icon" width="24" height="24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M18 6l-12 12"></path>
+						<path d="M6 6l12 12"></path>
+					</svg>
+					<span>close</span>
+				</button>
+				<hgroup>
+					<h2>We value your feedback</h2>
+					<p>Your feedback is invaluable in shaping a better shopping journey for you and others. Thank you for being a part of our commitment to excellence!</p>
+				</hgroup>
+				<fieldset>
+					<div>
+						<input id="feedback-terrible" type="radio" name="feedback" value="terrible" />
+						<label for="feedback-terrible">
+							<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M12 21a9 9 0 1 1 0 -18a9 9 0 0 1 0 18z" />
+								<path d="M8 16l1 -1l1.5 1l1.5 -1l1.5 1l1.5 -1l1 1" />
+								<path d="M8.5 11.5l1.5 -1.5l-1.5 -1.5" />
+								<path d="M15.5 11.5l-1.5 -1.5l1.5 -1.5" />
+							</svg>
+							<span>Terrible</span>
+						</label>
+					</div>
+					<div>
+						<input id="feedback-bad" type="radio" name="feedback" value="bad" required />
+						<label for="feedback-bad">
+							<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+								<path d="M9 10l.01 0" />
+								<path d="M15 10l.01 0" />
+								<path d="M9.5 15.25a3.5 3.5 0 0 1 5 0" />
+							</svg>
+							<span>Bad</span>
+						</label>
+					</div>
+					<div>
+						<input id="feedback-okay" type="radio" name="feedback" value="okay" />
+						<label for="feedback-okay">
+							<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+								<path d="M9 10l.01 0" />
+								<path d="M15 10l.01 0" />
+								<path d="M9 15l6 0" />
+							</svg>
+							<span>Okay</span>
+						</label>
+					</div>
+					<div>
+						<input id="feedback-good" type="radio" name="feedback" value="good" />
+						<label for="feedback-good">
+							<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+								<path d="M9 10l.01 0" />
+								<path d="M15 10l.01 0" />
+								<path d="M9.5 15a3.5 3.5 0 0 0 5 0" />
+							</svg>
+							<span>Good</span>
+						</label>
+					</div>
+					<div>
+						<input id="feedback-amazing" type="radio" name="feedback" value="amazing" />
+						<label for="feedback-amazing">
+							<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+								<path d="M9 9l.01 0" />
+								<path d="M15 9l.01 0" />
+								<path d="M8 13a4 4 0 1 0 8 0h-8" />
+							</svg>
+							<span>Amazing</span>
+						</label>
+					</div>
+				</fieldset>
+				<div>
+					<label for="feedback-textarea"><h3>Share your feedback</h3></label>
+					<textarea id="feedback-textarea"></textarea>
+				</div>
+				<button>Send feedback</button>
+			</form>
+		</dialog>
+		<dialog id="thankyou-feedback">
+			<form>
+				<button type="button" class="close-button" formmethod="dialog">
+					<svg class="icon" width="24" height="24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M18 6l-12 12"></path>
+						<path d="M6 6l12 12"></path>
+					</svg>
+					<span>close</span>
+				</button>
+				<hgroup>
+					<h2>Thank you for your feedback</h2>
+					<p>Thank you for being a part of our commitment to excellence!</p>
+				</hgroup>
+			</form>
+		</dialog>
+		<dialog id="thankyou-newsletter">
+			<form>
+				<button type="button" class="close-button" formmethod="dialog">
+					<svg class="icon" width="24" height="24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M18 6l-12 12"></path>
+						<path d="M6 6l12 12"></path>
+					</svg>
+					<span>close</span>
+				</button>
+				<hgroup>
+					<h2>Thank you for subscribing to our newsletter!</h2>
+					<p>We are excited to bring you valuable content and updates straight to your inbox.</p>
+				</hgroup>
+			</form>
+		</dialog>
+		<dialog id="settings-modal">
+			<form>
+				<button class="close-button" formmethod="dialog">
+					<svg class="icon" width="24" height="24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M18 6l-12 12"></path>
+						<path d="M6 6l12 12"></path>
+					</svg>
+					<span>close</span>
+				</button>
+				<p><strong class="settings-title">settings</strong></p>
+				<label for="products-per-page">number of products per page</label>
+				<input type="number" id="products-per-page" min="1" value="10" />
+				<label for="settings-darkmode">dark mode</label>
+				<input id="settings-darkmode" class="toggle" type="checkbox" />
+				<label for="settings-hue">accent color</label>
+				<div id="settings-hue-wrapper">
+					<div id="settings-hue-preview"></div>
+					<input id="settings-hue" type="range" min="0" max="360" />
+				</div>
+			</form>
+		</dialog>
+		<svg id="svg" class="sr-only"></svg>
+		<script src="script.js"></script>
+	</body>
+</html>
