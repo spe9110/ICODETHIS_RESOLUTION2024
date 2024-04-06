@@ -1,0 +1,485 @@
+<html id="html">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,300,400&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="index.js"></script>
+</head>
+
+<body id="body" class="flex flex-col w-full h-fit items-center overflow-x-hidden">
+    <div id="hamburgerButtonContainer"
+        class="w-screen h-40 bg-transparent z-40 absolute top-0 flex items-center justify-end px-6">
+        <div id="hamburgerButton"
+            class="cursor-pointer w-8 h-8 md:hidden flex flex-col items-center justify-center gap-2">
+            <span
+          id="line1"
+          class="w-full h-[3px] bg-black transition-all duration-500 ease-out"
+        ></span>
+            <span
+          id="line2"
+          class="w-full h-[3px] bg-black transition-all duration-500 ease-out"
+        ></span>
+            <span
+          id="line3"
+          class="w-full h-[3px] bg-black transition-all duration-500 ease-out"
+        ></span>
+        </div>
+    </div>
+    <div id="hamburgerMenuContainer" class="w-screen h-screen flex absolute top-0 -z-10 md:hidden overflow-hidden">
+        <div id="hamburgerMenu"
+            class="w-full h-full bg-[#483ED0] opacity-90 transition-transform translate-x-full duration-500 z-30 ease-in-out flex flex-col items-center justify-center gap-10">
+            <button class="text-white text-4xl hamburger-links">About</button>
+            <button class="text-white text-4xl hamburger-links">Work</button>
+            <button class="text-white text-4xl hamburger-links">Solutions</button>
+        </div>
+    </div>
+    <div id="modalWindow"
+        class="fixed inset-0 overflow-hidden w-full h-screen bg-black bg-opacity-30 z-50 items-center justify-center transition duration-300 hidden">
+        <!-- <div
+        id="modalContainer"
+        class="w-full md:w-3/4 h-full bg-white md:max-w-3xl flex flex-col"
+      >
+        <div
+          id="modalHeader"
+          class="w-full h-[8%] bg-[#1F1E26] flex items-center shadow-lg"
+        >
+          <button
+            id="closeModal"
+            class="text-white ml-auto mr-12 w-10 h-10 flex items-center justify-center border border-gray-400 rounded-full group"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-x w-3 h-3 transition duration-300 group-hover:rotate-90 ease-in"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M18 6l-12 12"></path>
+              <path d="M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          id="modalContent"
+          class="w-full h-[92%] flex flex-col p-20 pt-12 gap-4"
+        >
+          <div id="contentUp" class="w-full h-[55%] flex flex-col">
+            <div class="w-full flex flex-col h-1/6 gap-3">
+              <p class="text-xs font-medium">UIDeli.com</p>
+              <h1 class="font-medium text-lg">
+                Helping UIDeli.com give their users the best online experience.
+              </h1>
+            </div>
+            <div class="w-full flex h-5/6 mt-auto">
+              <img
+                src="https://github.com/vladnn99/iCodeThis/blob/main/portfolio-project/files/image33.png?raw=true"
+                alt=""
+                class="w-full object-cover"
+                style="object-position: center top"
+              />
+            </div>
+          </div>
+          <div id="contentDown" class="w-full h-[45%] flex gap-16">
+            <div class="w-1/5 h-full flex flex-col">
+              <a
+                href="#"
+                class="text-xs underline flex items-center gap-2 group font-medium"
+                >Visit website
+                <span
+                  class="flex items-center w-5 h-5 justify-center bg-[#483ED0] text-white rounded-full transition duration-300 group-hover:bg-[#7166FF]"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-arrow-up-right w-3 h-3 transition duration-300 group-hover:rotate-45"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M17 7l-10 10"></path>
+                    <path d="M8 7l9 0l0 9"></path>
+                  </svg> </span
+              ></a>
+            </div>
+            <div class="w-4/5 h-full flex flex-col gap-3">
+              <h2 class="font-medium">About uideli.com</h2>
+              <p class="text-xs">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                praesentium nostrum sapiente mollitia, quia voluptas quam rem
+                architecto ipsam sit neque tenetur at asperiores aspernatur
+                quod! Harum aut eos quis iure velit reiciendis ipsum, tempora
+                voluptates fugit sit eius porro ut hic tempore esse ipsa nihil
+                repudiandae nisi quae suscipit.
+              </p>
+              <h2 class="font-medium mt-4">The project</h2>
+              <p class="text-xs">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
+                atque temporibus eius deleniti nam praesentium.
+              </p>
+              <div id="tags" class="flex gap-2 items-center text-xs mt-4">
+                <button class="px-5 h-10 rounded-full border">Design</button>
+                <button class="px-5 h-10 rounded-full border">
+                  Development
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <nav id="navTop"
+        class="w-full h-40 flex items-center justify-between px-8 transition-all duration-200 ease-in bg-white md:fixed top-0 z-10 md:z-50 expanded">
+        <div id="avatarAndName" class="w-2/5 h-full flex items-center gap-2">
+            <img
+          id="avatar"
+          class="w-32 h-32 rounded-full object-cover transition-all duration-200 ease-in"
+          src="https://pbs.twimg.com/profile_images/1421401340065030153/dmpZlL6O_400x400.jpg"
+          alt="avatar"
+        />
+            <p class="text-xs font-medium">© Vlad Negrean</p>
+        </div>
+        <div id="menu" class="w-2/5 h-fit hidden md:flex items-center justify-center font-medium">
+            <div class="text-sm flex justify-center rounded-full w-60 relative">
+                <div id="sliderBehind" class="absolute w-full h-full rounded-full border">
+                    <div id="slider"
+                        class="w-1/3 h-full rounded-full bg-[#1F1E26] absolute left-0 z-[0]transition-transform duration-500 ease-out">
+                    </div>
+                </div>
+                <a href=""
+                    class="w-1/3 h-10 rounded-full z-20 flex items-center justify-center links text-white">About</a>
+                <a href="" class="w-1/3 h-10 rounded-full z-20 flex items-center justify-center links">Work</a>
+                <a href="" class="w-1/3 h-10 rounded-full z-20 flex items-center justify-center links">Solutions</a>
+            </div>
+        </div>
+    </nav>
+    <section id="section1" class="w-full h-fit max-w-3xl flex flex-col gap-4 pt-4 pb-4 px-8 md:mt-48">
+        <h1 class="font-medium w-1/2 text-xl">
+            I'm Vlad, and i turn ideas into digital experiences that people love.
+        </h1>
+        <p class="text-xs w-1/3">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique,
+            magni?
+        </p>
+        <div id="startButtons" class="w-fit h-fit flex items-center gap-1 group cursor-pointer">
+            <button
+          class="text-sm w-32 h-9 rounded-full text-white bg-[#1F1E26] transition-colors group-hover:bg-[#333240] duration-300"
+        >
+          Start a project
+        </button>
+            <button
+          class="flex items-center w-9 h-9 justify-center bg-[#483ED0] text-white rounded-full transition group-hover:bg-[#7166FF] duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-arrow-up-right w-4 h-4 transition group-hover:rotate-45 duration-300"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M17 7l-10 10"></path>
+            <path d="M8 7l9 0l0 9"></path>
+          </svg>
+        </button>
+        </div>
+        <div id="selfDescription" class="w-3/5 font-medium ml-auto flex flex-col gap-4">
+            <p>
+                Welcome, make yourself at home. I am a multidisciplinary web designer,
+                designing and building beautiful digital products, for companies
+                around the world
+            </p>
+            <p>
+                I believe that design should be both functional and aestetically
+                pleasing, and I am dedicated to delivering exceptional user
+                experiences through thoughtful desgin and meticulous attention to
+                detail
+            </p>
+            <a href="#" class="text-xs underline flex items-center gap-2 group">Download resume
+                <span
+            class="flex items-center w-5 h-5 justify-center bg-[#483ED0] text-white rounded-full transition duration-300 group-hover:bg-[#7166FF]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-arrow-up-right w-3 h-3 transition duration-300 group-hover:rotate-45"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M17 7l-10 10"></path>
+              <path d="M8 7l9 0l0 9"></path>
+            </svg> </span></a>
+        </div>
+        <span class="w-full border-b mt-4"></span>
+    </section>
+    <section id="section2" class="w-full h-fit max-w-3xl flex flex-col gap-4 pb-16 px-8">
+        <h1 class="font-medium w-1/2 text-xl">The work I do</h1>
+        <div id="workFiltersContainer" class="w-full h-10 flex justify-between">
+            <div id="workFilters" class="w-fit h-full flex items-center text-xs font-medium gap-3">
+                <button
+            class="px-5 h-10 rounded-full border text-white bg-[#1F1E26] filter-buttons transition-colors duration-300 hover:text-white hover:bg-[#1F1E26]"
+          >
+            All
+          </button>
+                <button
+            class="px-5 h-10 rounded-full border transition-colors duration-300 filter-buttons hover:text-white hover:bg-[#1F1E26]"
+          >
+            Design
+          </button>
+                <button
+            class="px-5 h-10 rounded-full border transition-colors duration-300 filter-buttons hover:text-white hover:bg-[#1F1E26]"
+          >
+            Development
+          </button>
+            </div>
+            <div id="viewType" class="h-10 gap-2 hidden md:flex">
+                <button
+            class="bg-[#1F1E26] w-10 h-10 rounded-full flex items-center justify-center border change-view-button text-white transition-colors duration-300 hover:text-white hover:bg-[#1F1E26]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="80"
+              height="80"
+              viewBox="0 0 80 80"
+              fill="none"
+              class=""
+            >
+              <circle cx="40" cy="40" r="40" fill="none" />
+              <rect x="32" y="32" width="6" height="6" fill="currentColor" />
+              <rect x="42" y="32" width="6" height="6" fill="currentColor" />
+              <rect x="32" y="42" width="6" height="6" fill="currentColor" />
+              <rect x="42" y="42" width="6" height="6" fill="currentColor" />
+            </svg>
+          </button>
+                <button
+            class="w-10 h-10 rounded-full flex items-center justify-center border change-view-button transition-colors duration-300 hover:text-white hover:bg-[#1F1E26]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="80"
+              height="80"
+              viewBox="0 0 80 80"
+              fill="none"
+            >
+              <circle cx="40" cy="40" r="39.5" stroke="#CACACC" />
+              <rect x="30" y="42" width="20" height="4" fill="currentColor" />
+              <rect x="30" y="34" width="20" height="4" fill="currentColor" />
+            </svg>
+          </button>
+            </div>
+        </div>
+        <div id="projectsContainer"
+            class="w-full h-fit custom-columns gap-8 font-medium mt-8 transition-all duration-300">
+            <!--  class for list: flex flex-col -->
+            <!-- <div class="flex gap-14 mb-8 h-56">
+          <img
+            class="object-cover w-2/5"
+            src="https://github.com/vladnn99/iCodeThis/blob/main/portfolio-project/files/image33.png?raw=true"
+            alt="UIDeli"
+            style="object-position: center top"
+          />
+          <div class="w-3/5 flex flex-col gap-3 justify-center">
+            <h2>UIDeli.com</h2>
+            <p class="text-xs font-semibold mb-2">
+              Design + Development <span class="ml-2">2023</span>
+            </p>
+            <p class="text-xs">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              possimus ad exercitationem inventore, ipsam neque quidem animi
+              sapiente magni necessitatibus.
+            </p>
+          </div>
+        </div> -->
+            <!-- <div class="flex flex-col gap-2 mb-8">
+          <img
+            class="object-contain w-full"
+            src="https://github.com/vladnn99/iCodeThis/blob/main/portfolio-project/files/image33.png?raw=true"
+            alt="UIDeli"
+          />
+          <h2>UIDeli.com</h2>
+          <p class="text-xs">
+            Design + Development <span class="ml-2">2023</span>
+          </p>
+        </div>
+        <div class="flex flex-col gap-2 mb-8">
+          <img
+            class="object-contain w-full"
+            src="https://github.com/vladnn99/iCodeThis/blob/main/portfolio-project/files/koto-studio.png?raw=true"
+            alt="koto-studio"
+          />
+          <h2>Koto Studio</h2>
+          <p class="text-xs">
+            Design + Development <span class="ml-2">2023</span>
+          </p>
+        </div>
+        <div class="flex flex-col gap-2 mb-8">
+          <img
+            class="object-contain w-full"
+            src="https://raw.githubusercontent.com/vladnn99/iCodeThis/d71ebea43880af266744a4361a5f0e5732527796/portfolio-project/files/switch-black.png"
+            alt="switch-black"
+          />
+          <h2>Switch Black</h2>
+          <p class="text-xs">Design<span class="ml-2">2023</span></p>
+        </div>
+        <div class="flex flex-col gap-2 mb-8">
+          <img
+            class="object-contain w-full"
+            src="https://raw.githubusercontent.com/vladnn99/iCodeThis/38012c94698ab35e5fba7d887a825c745a046be5/portfolio-project/files/image-34.png"
+            alt="image-34"
+          />
+          <h2>Remarket</h2>
+          <p class="text-xs">Development<span class="ml-2">2023</span></p>
+        </div>
+        <div class="flex flex-col gap-2 mb-8">
+          <img
+            class="object-contain w-full"
+            src="https://raw.githubusercontent.com/vladnn99/iCodeThis/89d3f9f21e032f4f286b2cb9b2bbcbff87f90f5f/portfolio-project/files/another-one.png"
+            alt="image-34"
+          />
+          <h2>Another One</h2>
+          <p class="text-xs">Development<span class="ml-2">2023</span></p>
+        </div>
+        <div class="flex flex-col gap-2 mb-8">
+          <img
+            class="object-contain w-full"
+            src="https://raw.githubusercontent.com/vladnn99/iCodeThis/4e279cfeef60d73a5322c98ee8281c20b663b081/portfolio-project/files/blender-renders.png"
+            alt="image-34"
+          />
+          <h2>Blender Renders</h2>
+          <p class="text-xs">Development<span class="ml-2">2023</span></p>
+        </div> -->
+        </div>
+        <div id="loadMoreContainer" class="w-full h-10 mt-4 flex items-center justify-center text-xs">
+            <button class="px-5 h-10 rounded-full border">Load more</button>
+        </div>
+    </section>
+    <footer class="w-full flex justify-center bg-[#1F1E26]">
+        <section id="section3"
+            class="w-full max-w-3xl h-fit flex flex-col gap-4 pb-4 pt-10 bg-[#1F1E26] text-white px-8">
+            <h1 class="font-medium w-1/2 text-xl">I can help you with</h1>
+            <div id="servicesContainer" class="w-full h-fit flex flex-col md:flex-row gap-6">
+                <div id="01i" class="w-full md:w-1/3 h-fit flex flex-col gap-2">
+                    <p class="text-[0.7rem] text-gray-500 border-b border-b-gray-500 pb-1">
+                        01
+                    </p>
+                    <h2 class="mt-1">Design</h2>
+                    <p class="text-[0.7rem] w-11/12 font-light">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
+                        soluta reprehenderit perspiciatis tenetur dicta fugit unde officia
+                        nisi necessitatibus quasi.
+                    </p>
+                    <p class="text-xs mt-1">Websites</p>
+                    <p class="text-xs">Mobile apps</p>
+                    <p class="text-xs">Web apps</p>
+                    <p class="text-xs">Design systems</p>
+                    <p class="text-xs">Branding</p>
+                </div>
+                <div id="02i" class="w-full md:w-1/3 h-fit flex flex-col gap-2">
+                    <p class="text-[0.7rem] text-gray-500 border-b border-b-gray-500 pb-1">
+                        02
+                    </p>
+                    <h2 class="mt-1">Development</h2>
+                    <p class="text-[0.7rem] w-11/12 font-light">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
+                        soluta reprehenderit perspiciatis tenetur dicta fugit unde officia
+                        nisi necessitatibus quasi.
+                    </p>
+                    <p class="text-xs mt-1">Websites</p>
+                    <p class="text-xs">Mobile apps</p>
+                    <p class="text-xs">Web apps</p>
+                </div>
+                <div id="03i" class="w-full md:w-1/3 h-fit flex flex-col gap-2">
+                    <p class="text-[0.7rem] text-gray-500 border-b border-b-gray-500 pb-1">
+                        03
+                    </p>
+                    <h2 class="mt-1">Full Package</h2>
+                    <p class="text-[0.7rem] w-11/12 font-light">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
+                        soluta reprehenderit perspiciatis tenetur dicta fugit unde officia
+                        nisi necessitatibus quasi.
+                    </p>
+                    <p class="text-xs mt-1">Design + Development</p>
+                </div>
+            </div>
+            <h2 class="mt-1 w-11/12">
+                Get the Full Package, Design + Development with requests & revisions.
+                No expensive hourly billing. Flat monthly rate. Pause anytime.
+            </h2>
+            <h1 class="font-medium w-1/2 text-xl">
+                $2999 <span class="text-[0.7rem] text-gray-400"> /month</span>
+            </h1>
+            <p class="text-[0.7rem] text-gray-400 w-full md:w-1/2">
+                Ideal for websites, web aps and brand design projects, custom code
+                solutions, blogs and app dashboard design.
+            </p>
+            <div id="bottomButton" class="w-fit h-fit flex items-center gap-1 group cursor-pointer">
+                <img
+            class="w-9 h-9 rounded-full object-cover"
+            src="https://pbs.twimg.com/profile_images/1421401340065030153/dmpZlL6O_400x400.jpg"
+            alt="avatar"
+          />
+                <button
+            class="text-sm w-32 h-9 rounded-full text-[#1F1E26] bg-white transition-colors group-hover:bg-gray-300 duration-300 ml-1"
+          >
+            Start a project
+          </button>
+                <button
+            class="flex items-center w-9 h-9 justify-center bg-[#483ED0] text-white rounded-full transition group-hover:bg-[#7166FF] duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-arrow-up-right w-4 h-4 transition group-hover:rotate-45 duration-300"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M17 7l-10 10"></path>
+              <path d="M8 7l9 0l0 9"></path>
+            </svg>
+          </button>
+            </div>
+            <div class="w-full border-b border-b-gray-500 pb-2 mt-10">
+                <p class="text-xs text-gray-500">SOCIAL MEDIA</p>
+            </div>
+            <div id="socialLinks" class="w-full h-fit flex text-xs gap-2 pb-8">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Github</a>
+                <a href="#">Dribble</a>
+            </div>
+        </section>
+    </footer>
+    <div id="scrollbarSpace" class="w-0 h-screen fixed inset-y-0 right-0 bg-transparent"></div>
+</body>
+
+</html>
