@@ -1,0 +1,187 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Remove the line below if you don't want to use TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&JetBrains+Mono:wght@100;200;300;400;500;600;700;800&Pacifico&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<!-- Change code below this line -->
+<body class="bg-[#121312] flex justify-center items-start min-h-screen relative font-poppins text-white pt-32 pb-20">
+    <div class="bg-spot fixed -top-10 -left-10 z-[-1]"></div>
+    <div class="bg-spot fixed -bottom-10 -right-10 z-[-1]"></div>
+
+    <nav class="fixed top-4 left-1/2 -translate-x-1/2 pl-6 pr-2 py-2 rounded-full border border-white/30 bg-[#272827] flex items-center justify-between w-[min(95%,600px)]">
+        <a href="javascript:void(0)" id="logo" class="flex items-center justify-center gap-1 text-white text-xl font-semibold">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a6fb89"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-ghost-3">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M5 11a7 7 0 0 1 14 0v7a1.78 1.78 0 0 1 -3.1 1.4a1.65 1.65 0 0 0 -2.6 0a1.65 1.65 0 0 1 -2.6 0a1.65 1.65 0 0 0 -2.6 0a1.78 1.78 0 0 1 -3.1 -1.4v-7" />
+                <path d="M10 10h.01" />
+                <path d="M14 10h.01" />
+            </svg>
+            Logo
+        </a>
+
+        <ul class="sm:flex hidden items-center justify-center gap-1
+            [&_li_button]:text-sm
+            [&_li_button]:text-white/50
+            [&_li_button]:px-4
+            [&_li_button]:py-1.5
+            [&_li_button]:rounded-full
+            [&_li_button]:duration-200
+            [&_li_button]:ease-linear
+            hover:[&_li_button]:text-white
+            hover:[&_li_button]:bg-[#171618]
+        ">
+            <li>
+                <button>Product</button>
+            </li>            
+            <li>
+                <button class="!text-white bg-[#171618]">Pricing</button>
+            </li>            
+            <li>
+                <button>About</button>
+            </li>            
+        </ul>
+
+        <button class="bg-[#a6fb89] rounded-full text-[#121312] font-semibold px-5 py-2.5 text-sm hover:bg-[#70f843] duration-200 ease-linear [box-shadow:0_0_15px_rgba(255,255,255,0.35)]">Contact Us</button>
+    </nav>
+
+    <main class="w-full flex flex-col items-center justify-start sm:gap-5 gap-2 sm:mt-10 mt-0 px-10">
+        <h1 class="md:text-5xl sm:text-4xl text-2xl font-semibold text-center">The Perfect Plan for Your Needs</h1>
+        <p class="text-white/60 font-extralight w-[min(600px,90%)] text-center sm:text-base text-sm">Our transparent pricing makes it easy to find a plan that works within your financial constraints.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-5 place-items-center">
+            <div class="h-fit flex flex-col items-start justify-center rounded-xl border border-white/30 bg-white/10 sm:py-14 py-7 sm:px-7 px-4 gap-5 w-full cursor-pointer hover:border-[#a6fb89] duration-150 ease-linear">
+                <h2 class="text-[#a7fe89] text-xl tracking-wider font-semibold">Free</h2>
+                <p class="sm:text-5xl text-3xl font-bold tetx-white">$0<span class="sm:text-3xl text-xl font-semibold text-white/50">/mo</span></p>
+                <p class="sm:text-base text-sm text-white/70">Upto <span class="font-semibold text-[#a6fb89]">5%</span> discount for referrals</p>
+                <ul class="flex flex-col items-start justify-center gap-3
+                    [&_li]:flex
+                    [&_li]:items-center
+                    [&_li]:justify-start
+                    [&_li]:gap-1
+                    [&_li]:text-white/70
+                    sm:[&_li]:text-sm
+                    [&_li]:text-xs
+                ">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                            <path d="M9 12l2 2l4 -4" />
+                        </svg>
+                        Unlimited Referrals
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                            <path d="M9 12l2 2l4 -4" />
+                        </svg>
+                        All integrations
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                            <path d="M9 12l2 2l4 -4" />
+                        </svg>
+                        Core Platform Features
+                    </li>
+                </ul>
+            </div>
+            <div class="h-fit flex flex-col items-start justify-center rounded-xl border border-white/30 bg-white/10 sm:py-14 py-7 sm:px-7 px-4 gap-5 w-full cursor-pointer hover:border-[#a6fb89] duration-150 ease-linear">
+                <h2 class="text-[#a7fe89] text-xl tracking-wider font-semibold">Grow</h2>
+                <p class="sm:text-5xl text-3xl font-bold tetx-white">$50<span class="sm:text-3xl text-xl font-semibold text-white/50">/mo</span></p>
+                <p class="sm:text-base text-sm text-white/70">Upto <span class="font-semibold text-[#a6fb89]">10%</span> discount for referrals</p>
+
+                <p>Everything in Free plus</p>
+
+                <ul class="flex flex-col items-start justify-center gap-3
+                    [&_li]:flex
+                    [&_li]:items-center
+                    [&_li]:justify-start
+                    [&_li]:gap-1
+                    [&_li]:text-white/70
+                    sm:[&_li]:text-sm
+                    [&_li]:text-xs
+                ">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                            <path d="M9 12l2 2l4 -4" />
+                        </svg>
+                        <p class="max-w-[24ch]">
+                            In-brand customizationE.g. in•brand email design widget menu integration.
+                        </p>
+                    </li>
+                </ul>
+
+                <p class="bg-[#354330] text-[#a6fb89] px-8 py-2 rounded-full italic mx-auto text-sm font-semibold">Recommended</p>
+            </div>
+            <div class="h-fit flex flex-col items-start justify-center rounded-xl border border-white/30 bg-white/10 sm:py-14 py-7 sm:px-7 px-4 gap-5 w-full cursor-pointer hover:border-[#a6fb89] duration-150 ease-linear">
+                <h2 class="text-[#a7fe89] text-xl tracking-wider font-semibold">Scale</h2>
+                <p class="sm:text-5xl text-3xl font-bold tetx-white">$100<span class="sm:text-3xl text-xl font-semibold text-white/50">/mo</span></p>
+                <p class="sm:text-base text-sm text-white/70">Upto <span class="font-semibold text-[#a6fb89]">15%</span> discount for referrals</p>
+
+                <p>Everything in Free plus</p>
+
+                <ul class="flex flex-col items-start justify-center gap-3
+                    [&_li]:flex
+                    [&_li]:items-center
+                    [&_li]:justify-start
+                    [&_li]:gap-1
+                    [&_li]:text-white/70
+                    sm:[&_li]:text-sm
+                    [&_li]:text-xs
+                ">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                            <path d="M9 12l2 2l4 -4" />
+                        </svg>
+                        Premium SLAs
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="">
+
+        </div>
+    </main>
+</body>
+<!-- Change code above this line -->
+
+</html>
