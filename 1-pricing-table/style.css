@@ -1,0 +1,9 @@
+/* Write your CSS code here */
+.bg-spot {
+    height: 200px;
+    width: 200px;
+    border-radius: 99999px;
+    background: rgb(151, 184, 22);
+    background: radial-gradient(circle, rgba(151, 184, 22, 1) 0%, rgba(151, 184, 22, 1) 10%, rgba(0, 212, 255, 0) 100%);
+    filter: blur(50px);
+}

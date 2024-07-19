@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Remove the line below if you don't want to use TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<!-- Change code below this line -->
+<body class="bg-[#202431] flex justify-center items-center min-h-screen my-4 ">
+   
+    <div class="bg-[#1a1e2c] text-white/50  w-[min(350px,98%)] ">
+        <div class=" m-4 border border-white/50 p-4 space-y-4 ">
+            <h2 class=" items-center flex flex-col ">
+                Last 7 days
+                <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M6 9l6 6l6 -6" />
+                            </svg>
+                        </button>
+            </h2>
+            
+            <div class="chart relative size-[70%] flex justify-center items-center mx-auto">
+                <canvas id="myChart" class=""></canvas>
+                <p class="text-lg absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">Sessions by
+                    device</p>
+            </div>
+            <div class="details flex justify-center pt-4 w-full">
+                <ul class="flex justify-center gap-4"></ul>
+            </div>
+           
+        </div>
+
+    </div>
+
+        
+    
+   
+</body>
+<!-- Change code above this line -->
+<script src="index.js"></script>
+</html>

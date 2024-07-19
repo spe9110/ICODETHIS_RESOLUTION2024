@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(198, 41, 189);
+    border-radius: 30px;
+}
+
+main {
+    height: 100%;
+    max-height: 600px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.quiz {
+    animation: 1s slide-in forwards;
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.score {
+    background: purple;
+    padding: 10px;
+}
+
+span.icon i {
+    font-size: 30px;
+}
+
+.bi-check-lg {
+    color: rgb(120, 245, 120);
+}
+
+.bi-x {
+    color: red;
+}
+
+.bi-arrow-up-right-circle,
+.bi-arrow-right-short {
+    font-size: 10px;
+    color: pink;
+}
+
+header {
+    padding: 40px;
+    width: 100%;
+}
+
+header, button.start {
+    background: rgb(198,41,189);
+    background: linear-gradient(90deg, rgba(198,41,189,1) 0%, rgba(199,81,231,0.49360994397759106) 100%);
+}
+.question-slide {
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(100%);
+}
+
+.question-slide.slide-in {
+    transform: translateX(0);
+}
+section {
+    animation: 1.5s slow forwards;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    color: purple;
+    max-width: 600px;
+    margin: 15% auto;
+    position: relative;
+    bottom: 40px;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+}
+
+form label:hover {
+    background: rgb(198, 41, 189);
+    background: linear-gradient(90deg, rgba(198, 41, 189, 1) 0%, rgba(199, 81, 231, 0.49360994397759106) 100%);
+    color: #fff;
+}
+
+input {
+    display: none;
+}
+
+form label {
+    cursor: pointer;
+    padding: 8px;
+    margin: 4px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    width: 100%;
+}
+
+.selected {
+    background-color: purple;
+    color: pink;
+}
+
+.buttons {
+    position: relative;;
+    bottom: 30px;
+}
+button {
+    cursor: pointer;
+}
+button.start {
+    background: linear-gradient(to right, rgba(198, 41, 189, 1) 50%, rgba(199, 81, 231, 0.4) 10%);
+    background-size: 200% 100%;
+    transition: background-position 0.3s ease;
+    border-radius: 12px;
+    border: 1px solid pink;
+    margin-top: 15px;
+    padding: 10px;
+    width: auto;
+}
+
+button.start:hover,
+button.submit:hover {
+    background-position: -100% 0;
+    border: 1px solid rgb(198,41,189);
+    color: rgb(198, 41, 189);
+    font-weight: 600;
+}
+button.submit:hover {
+    background-color: purple;
+    color: #fff;
+}
+.later:hover {
+    border: 2px solid rgba(198, 41, 189, 1);
+    background: radial-gradient(circle, rgba(199, 17, 97, 1) 0%, rgba(233, 148, 211, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.later {
+    font-weight: 600;
+    border: 2px solid;
+    border-image: linear-gradient(90deg, rgba(198, 41, 189, 1) 0%, rgba(199, 81, 231, 0.49360994397759106) 100%);
+    padding: 10px;
+    border-image-slice: 1;
+    width: auto;
+}
+
+.submit {
+    background: rgb(198, 41, 189);
+    background: linear-gradient(90deg, rgba(198, 41, 189, 1) 0%, rgba(199, 81, 231, 0.49360994397759106) 100%);
+    background-size: 200% 100%;
+    transition: background-position 0.3s ease;
+    border: 1px solid pink;
+    padding: 10px;
+    width: auto;
+}
+
+@media screen and (max-width: 575px) {
+    main {
+        margin: 20px;
+        max-height: 800px;
+    }
+
+    section {
+        box-shadow: none;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        padding: 0 40px;
+        gap: 10px;
+        bottom: 60px;
+    }
+
+    .buttons button {
+        display: block;
+    }
+
+    .score {
+        padding: 4px;
+    }
+}
+
+@keyframes slow {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

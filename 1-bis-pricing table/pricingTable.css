@@ -1,0 +1,441 @@
+/* Add CSS here */
+
+:root {
+    --clr-primario: hsl(228, 38%, 84%);
+    --clr-secundario: hsl(233, 21%, 9%);
+    --clr-ternario: hsl(231, 16%, 24%);
+    --clr-accent-1: hsl(284, 100%, 87%, .8);
+    --clr-accent-1-dark: hsl(284, 100%, 87%, .4);
+    --clr-accent-2: hsl(183, 78%, 82%, .8);
+    --clr-accent-2-dark: hsl(183, 78%, 82%, .4);
+    --clr-accent-3: hsl(32, 100%, 86%, .8);
+    --clr-accent-3-dark: hsl(32, 100%, 86%, .4);
+    --clr-bg: hsl(228, 20%, 5%);
+    --clr-bg-main: hsl(233, 18%, 7%);
+    --clr-main-outline: hsl(229, 20%, 12%);
+    --clr-bg-card: hsl(231, 24%, 8%, .5);
+    --clr-bg-card-upper: hsl(232, 25%, 22%, .5);
+    --clr-card-border: hsl(234, 20%, 20%);
+    --clr-bg-leader-item: hsl(270, 89%, 18%);
+    --clr-bg-position: hsl(270, 89%, 65%, .2);
+    --clr-bg-button-left: hsl(178, 56%, 45%);
+    --clr-bg-button-right: hsl(60, 79%, 34%);
+    --clr-border-image: hsl(270, 89%, 34%);
+    --clr-border-item-hover: hsl(15, 3%, 57%);
+    --clr-box-shadow: hsl(270, 62%, 33%);
+    --clr-box-shadow-up: hsl(270, 89%, 94%);
+    --ff-primaria: "Space Mono", monospace;
+    --fs-primaria: 1rem;
+    transition: all .250s ease-in-out;
+}
+
+/* Estilos Reset */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-primaria);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    line-height: 1.5;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+button,
+input {
+    position: relative;
+    appearance: none;
+    background-color: transparent;
+    color: inherit;
+    font: inherit;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--clr-bg) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--clr-accent-2);
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+[hidden] {
+    display: none;
+}
+
+/* utility classes */
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.visibility-0 {
+    visibility: hidden;
+}
+
+.pointer-events-none {
+    pointer-events: none;
+}
+
+.translate-x-100 {
+    transform: translateX(100%);
+}
+
+.-translate-x-100 {
+    transform: translateX(-100%);
+}
+
+.translate-x-100vw {
+    transform: translateX(100vw);
+}
+
+.-translate-x-100vw {
+    transform: translateX(-100vw);
+}
+
+.translate-y-100vh {
+    transform: translateY(100vh);
+}
+
+.-translate-y-100vh {
+    transform: translateY(-100vh);
+}
+
+.translate-y-100 {
+    transform: translateY(100%);
+}
+
+.-translate-y-100 {
+    transform: translateY(-100%);
+}
+
+.scale-0 {
+    scale: 0;
+}
+
+.scale-y-0 {
+    transform: scaleY(0);
+}
+
+.-rotate-180 {
+    transform: rotate(-180deg);
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.invert-x {
+    transform: scaleX(-1);
+}
+
+.invert-y {
+    transform: scaleY(-1);
+}
+
+.translate-x-vw {
+    transform: translateX(100vw);
+}
+
+.-translate-x-vw {
+    transform: translateX(-100vw);
+}
+
+/* Estilos principales */
+body {
+    display: grid;
+    place-content: center center;
+    min-height: 100dvh;
+    background-color: var(--clr-bg);
+    color: var(--clr-primario);
+    font-size: var(--fs-primaria);
+    font-weight: 400;
+    user-select: none;
+}
+
+body:before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-color: var(--clr-bg-card);
+    background-image: url('https://i.imgur.com/TQp5rZG.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: overlay;
+    opacity: .2;
+}
+
+body:after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-color: var(--clr-bg);
+    background: linear-gradient(-180deg, var(--clr-bg), transparent 80%);
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    z-index: -1;
+}
+
+main {
+    position: relative;
+    display: flex;
+    gap: .5rem;
+    width: clamp(20rem, 100vw, 52rem);
+    border: 1rem solid var(--clr-bg-main);
+    border-radius: 2rem;
+    outline: 1px solid var(--clr-main-outline);
+    outline-offset: .2rem;
+    transition: all .400s ease-in-out;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+    width: calc(100% / 3);
+    padding: 2.6rem;
+    padding-block-start: 2.6rem;
+    background: linear-gradient(135deg, var(--clr-bg-card), var(--clr-bg-card-upper));
+    border: 1px solid var(--clr-card-border);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    transition: all .250s ease-in-out;
+    overflow: hidden;
+}
+
+.card:hover {
+    border: 1px solid var(--accent-color);
+}
+
+.gradient {
+    position: absolute;
+    width: 40rem;
+    aspect-ratio: 1;
+    background: radial-gradient(circle, var(--accent-color) 0%, transparent 50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .3;
+    z-index: -1;
+}
+
+.card-1,
+.gradient-1 {
+    --accent-color: var(--clr-accent-1);
+    --accent-color-dark: var(--clr-accent-1-dark);
+}
+
+.card-2,
+.gradient-2 {
+    --accent-color: var(--clr-accent-2);
+    --accent-color-dark: var(--clr-accent-2-dark);
+}
+
+.card-3,
+.gradient-3 {
+    --accent-color: var(--clr-accent-3);
+    --accent-color-dark: var(--clr-accent-3-dark);
+}
+
+.gradient-1 {
+    bottom: -20rem;
+    left: -20rem;
+}
+
+.gradient-2 {
+    top: -20rem;
+    left: 0rem;
+}
+
+.gradient-3 {
+    top: -15rem;
+    left: 30rem;
+}
+
+.card:before,
+.card:after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    background-color: transparent;
+    border-bottom-right-radius: 20px;
+    box-shadow: 1px 1px var(--clr-card-border);
+    transition: all .250s ease-in-out;
+}
+
+.card:hover:before {
+    box-shadow: 1px 1px var(--accent-color);
+}
+
+.card:after {
+    position: absolute;
+    top: 6.21rem;
+    border-bottom-right-radius: unset;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -1px var(--clr-card-border);
+}
+
+.card:hover:after {
+    box-shadow: 1px -1px var(--accent-color);
+}
+
+.icon-svg {
+    position: absolute;
+    top: 2.22rem;
+    right: .2rem;
+    display: grid;
+    place-content: center;
+    width: 4rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transition: all .250s ease-in-out;
+}
+
+.icon-svg svg {
+    width: 4.4rem;
+    stroke: var(--clr-card-border);
+    stroke-width: 1.2;
+    transition: all .250s .250s ease-in-out;
+}
+
+.card:hover .icon-svg svg {
+    stroke: var(--accent-color);
+}
+
+h2 {
+    margin-block-start: -.3rem;
+    margin-block-end: 2rem;
+    padding-block: .2rem;
+    padding-inline: .5rem;
+    color: var(--accent-color);
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    line-height: 1.4;
+    border: 2px solid var(--accent-color);
+    border-radius: 2rem;
+    transition: all .400s ease-in-out;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: -2rem;
+}
+
+.price>p {
+    display: flex;
+    align-items: baseline;
+    gap: .2rem;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.price>p>span {
+    font-size: 2.2rem;
+}
+
+small {
+    margin-block-start: -.5rem;
+    font-size: .65rem;
+    font-weight: 600;
+    opacity: .5;
+}
+
+.description {
+    height: 4rem;
+    font-size: .7rem;
+}
+
+.action-btn {
+    display: grid;
+    place-content: center;
+    margin-block-start: -1rem;
+    padding-block: .5rem;
+    padding-inline: 1rem;
+    background: linear-gradient(180deg, var(--accent-color), var(--accent-color-dark));
+    background-size: 100% 300%;
+    background-position: 0% -150%;
+    color: var(--clr-secundario);
+    font-size: .8rem;
+    font-weight: 600;
+    border-radius: .3rem;
+    transition: all .400s ease-in-out;
+}
+
+.action-btn:hover {
+    background-position: 0% 0%;
+}
+
+
+@media (max-width: 40rem) {
+    main {
+        flex-direction: column;
+        width: 20rem;
+    }
+
+    .card {
+        width: 100%;
+        max-height: 6rem;
+        transition: all .400s ease-in-out;
+    }
+
+    .card:hover {
+        max-height: 22rem;
+    }
+
+    .card:hover h2 {
+        margin-block-start: .8rem;
+    }
+}

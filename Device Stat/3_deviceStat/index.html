@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=VT323&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="index.css">
+
+<body>
+    <main class="">
+        <div class="dropdown dropdown-period">
+            <button class="dropdown-btn" data-title="Select period">
+                    <p>Last 7 days</p> 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M6 9l6 6l6 -6" />
+                    </svg>
+                </button>
+            <ul class="dropdown-list">
+                <li class="dropdown-item dropdown-item--active" data-key="lastSevenDays">
+                    <a href="#">
+                        Last 7 Days
+                    </a>
+                </li>
+                <li class="dropdown-item" data-key="lastMonth">
+                    <a href="#">
+                        Last Month
+                    </a>
+                </li>
+                <li class="dropdown-item" data-key="lastYear">
+                    <a href="#">
+                        Last Year
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="card card-1">
+            <div class="inner-card">
+                <div class="card-header">
+
+                </div>
+                <div class="chart-graphic">
+                    <canvas id="myChart"></canvas>
+                    <p>
+                        <span>Sessions by</span>
+                        <span>devices</span>
+                    </p>
+                </div>
+                <ul class="legend-list">
+                    <li class="legend-item">
+                        <div class="legend-item-left">
+                            <div class="circle"></div>
+                            <p>Desktop</p>
+                        </div>
+                        <p>49.4%</p>
+                    </li>
+                    <li class="legend-item">
+                        <div class="legend-item-left">
+                            <div class="circle"></div>
+                            <p>Images</p>
+                        </div>
+                        <p>31.6%</p>
+                    </li>
+                    <li class="legend-item">
+                        <div class="legend-item-left">
+                            <div class="circle"></div>
+                            <p>Tablet</p>
+                        </div>
+                        <p>19%</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

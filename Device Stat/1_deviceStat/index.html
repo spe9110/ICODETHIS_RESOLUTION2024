@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-slate-900/90 flex justify-center items-center min-h-screen">
+    <!-- Main container -->
+    <div class="bg-slate-800 p-4 w-3/4 max-w-[22em] min-w-[18em] rounded relative">
+        <main class="border border-gray-700 rounded-sm">
+            <div class="text-gray-300 w-fit mx-auto mt-4">
+                <span class="text-c">Last 7 days</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="chevron-down w-5 h-5 mx-auto cursor-pointer">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+                <div class="options-c [&>span]:block text-sm text-black absolute top-20 w-fit z-10 hidden">
+                    <span id="last-7" class="px-2 py-0.5 bg-slate-100 hover:bg-blue-600 hover:text-white rounded-sm cursor-pointer transition-all">Last 7 days</span>
+                    <span id="last-30" class="px-2 py-0.5 mt-1.5 bg-slate-100 hover:bg-blue-600 hover:text-white rounded-sm cursor-pointer transition-all">Last 30 days</span>
+                </div>
+            </div>
+
+
+            <div class="mt-8 relative">
+                <canvas id="my-chart" class="mx-auto" width="200"></canvas>
+                <canvas id="second-chart" class="mx-auto" width="200"></canvas>
+                <span class="text-gray-100 text-sm absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">Sessions by device</span>
+            </div>
+
+            <div class="flex justify-center gap-x-8 text-white mt-10 mb-4">
+                <!-- Cont -->
+                <div class="w-fit">
+                    <div class="flex items-center gap-x-1">
+                        <span class="block w-4 h-4 bg-[#3498db] rounded-full"></span>
+                        <small class="text-gray-300">Desktop</small>
+                    </div>
+                    <span class="desktop text-lg font-medium text-center block">49.4%</span>
+                </div>
+
+                <!-- Cont -->
+                <div class="w-fit">
+                    <div class="flex items-center gap-x-1">
+                        <span class="block w-4 h-4 bg-[#6c5ce7] rounded-full"></span>
+                        <small class="text-gray-300">Mobile</small>
+                    </div>
+                    <span class="mobile text-lg font-medium text-center block">31.6%</span>
+                </div>
+
+                <!-- Cont -->
+                <div class="w-fit">
+                    <div class="flex items-center gap-x-1">
+                        <span class="block w-4 h-4 bg-[#00cec9] rounded-full"></span>
+                        <small class="text-gray-300">Tablet</small>
+                    </div>
+                    <span class="tablet text-lg font-medium text-center block">19%</span>
+                </div>
+            </div>
+        </main>
+
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

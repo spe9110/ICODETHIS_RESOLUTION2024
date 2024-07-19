@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body class="flex justify-center items-center min-h-screen bg-pink-200">
+    <main class="begin bg-white text-pink-50 space-y-4 shadow-2xl max-w-md md:max-w-lg">
+        <header class="text-center">
+            <h1>Welcome to our quiz app!</h1>
+        </header>
+        <section class="bg-white pt-0 p-4 flex justify-center shadow-none">
+            <button class="start text-pink-100">Start your Quiz here</button>
+        </section>
+    </main>
+
+    <main id="quiz" class="quiz bg-white text-pink-50 space-y-4 shadow-2xl">
+        <header class="flex justify-between items-center">
+            <div class="score flex gap-4">
+                <span class="correct"><span class="icon"><i class="bi bi-check-lg"></i></span> 0 Correct</span>
+                <span class="mistake"><span class="icon"><i class="bi bi-x"></i></span> 0 Wrong</span>
+                <span class="skipped"><span class="icon"><i class="bi bi-arrow-up-right-circle"></i></span> 0 Skipped</span>
+            </div>
+            <div class="timer">
+                <span class="icon"><i class="bi bi-stopwatch"></i></span>
+                <span id="time-elapsed">0:30</span>
+            </div>
+        </header>
+        <section class="bg-white pt-0 p-8 flex justify-center flex-col">
+            <div class="top-header pt-8">
+                <span class="question">Question <span id="question-number"></span>
+                <span id="remaining-questions"></span>
+                </span>
+                <p class="mt-6 mb-6" id="question-text"></p>
+            </div>
+            <div class="card-body">
+                <span class="options">Answer options:</span>
+                <form class="form-group grid mt-4 mb-6" id="answer-options">
+                </form>
+            </div>
+        </section>
+        <div class="buttons text-center">
+            <button class="later text-pink-400" onclick="skipQuestion()">SKIP FOR NOW</button>
+            <button class="submit text-pink-50" onclick="submitAnswer()">SUBMIT ANSWER</button>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

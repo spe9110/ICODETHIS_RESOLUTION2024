@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.36.0/tabler-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<!-- Change code below this line -->
+
+<body class="bg-[#f1f4ff] flex justify-center items-center min-h-screen font-['Poppins']">
+    <div class="max-w-[650px] w-full shadow-xl flex flex-col overflow-hidden -translate-y-[110vh] main transition duration-500">
+        <div class="bg-gradient-to-tr from-[#49bbe4] to-[#71e7e8] flex justify-between sm:px-20 px-8 pt-8 pb-12">
+            <div class="flex gap-8">
+                <div class="flex text-white gap-2 items-center">
+                    <i class="ti ti-check text-2xl font-bold"></i>
+                    <div class="flex items-center gap-1">
+                        <span class="font-medium text-lg correct">0</span>
+                        <span class="text-white/90">correct</span>
+                    </div>
+                </div>
+                <div class="flex text-white gap-2 items-center">
+                    <i class="ti ti-x text-2xl font-bold"></i>
+                    <div class="flex items-center gap-1">
+                        <span class="font-medium text-lg wrong">0</span>
+                        <span class="text-white/90">wrong</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-white flex gap-1 items-center">
+                <i class="ti ti-alarm-filled text-2xl"></i>
+                <span class="text-lg timer">24:05</span>
+            </div>
+        </div>
+        <div class="sm:px-20 px-8 bg-white flex flex-col items-center relative z-10">
+            <div class="shadow-lg py-8 -mt-6 bg-white space-y-4 w-full quizContainer transition duration-500 ">
+                <div class="px-8 space-y-2">
+                    <div class="flex gap-2">
+                        <h4 class="text-gray-400">Question <span class="questionNo">1</span></h4>
+                        <h6 class="text-gray-400">(<span class="remainingQues">1</span> remaining)</h4>
+                    </div>
+                    <div class="text-lg text-gray-600 question">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus praesentium expedita earum excepturi vitae alias
+                        sunt perferendis quis autem impedit.
+                    </div>
+                </div>
+                <div class="px-5 space-y-3">
+                    <span class="text-gray-400 px-3">Answer Options</span>
+                    <div class="flex flex-col gap-1">
+                        <label for="a" class="cursor-pointer">
+                            <input type="radio" name="answer" value="a" id="a" class="peer appearance-none sr-only answer">
+                            <div class="flex items-center gap-2 px-3 py-1 peer-checked:text-white text-gray-700 relative z-10 hover:bg-sky-100/70 rounded-md transition duration-300  before:absolute before:inset-0 before:bg-gradient-to-tr before:from-[#49bbe4] before:to-[#71e7e8] before:-z-10 before:rounded-md before:shadow-lg before:opacity-0 peer-checked:before:opacity-100 ">
+                                <h2 class="text-2xl font-medium">A</h2>
+                                <div class="optionA">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+                            </div>
+                        </label>
+                        <label for="b" class="cursor-pointer">
+                            <input type="radio" value="b" name="answer" id="b" class="peer appearance-none sr-only answer">
+                            <div class="flex items-center gap-2 px-3 py-1 peer-checked:text-white text-gray-700 relative z-10 hover:bg-sky-100/70 rounded-md transition duration-300  before:absolute before:inset-0 before:bg-gradient-to-tr before:from-[#49bbe4] before:to-[#71e7e8] before:-z-10 before:rounded-md before:shadow-lg before:opacity-0 peer-checked:before:opacity-100 ">
+                                <h2 class="text-2xl font-medium">B</h2>
+                                <div class="optionB">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+                            </div>
+                        </label>
+                        <label for="c" class="cursor-pointer">
+                            <input type="radio" value="c" name="answer" id="c" class="peer appearance-none sr-only answer">
+                            <div class="flex items-center gap-2 px-3 py-1 peer-checked:text-white text-gray-700 relative z-10 hover:bg-sky-100/70 rounded-md transition duration-300  before:absolute before:inset-0 before:bg-gradient-to-tr before:from-[#49bbe4] before:to-[#71e7e8] before:-z-10 before:rounded-md before:shadow-lg before:opacity-0 peer-checked:before:opacity-100 ">
+                                <h2 class="text-2xl font-medium">C</h2>
+                                <div class="optionC">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="py-8 space-x-2 btns transition duration-500 ">
+                <button class="text-sm uppercase rounded-lg px-5 py-2 border border-[#3ab5e0] text-[#3ab5e0] font-medium relative z-10 hover:text-white hover:shadow-md hover:-translate-y-1 active:translate-y-0 transition duration-300 before:absolute before:-z-10 before:bg-[#3ab5e0] before:inset-0 before:rounded-md before:scale-x-0 hover:before:scale-x-100 before:transition before:duration-300 ansLaterBtn">Skip Question</button>
+                <button class="text-sm uppercase rounded-lg px-5 py-2 border border-[#3ab5e0] text-white font-medium relative z-10 hover:text-[#3ab5e0] hover:shadow-md hover:-translate-y-1 active:translate-y-0 transition duration-300 before:absolute before:-z-10 before:bg-[#3ab5e0] before:inset-0 before:rounded-md hover:before:scale-x-0 before:transition before:duration-300 sendBtn">Send answer</button>
+            </div>
+            <div class="absolute inset-0 py-4 z-10  grid place-content-center gap-3 resultContainer scale-0 transition duration-500">
+                <div class="flex flex-col items-center justify-center gap-1">
+                    <div class="space-y-4 pb-3">
+                        <h1 class="text-gray-700 text-3xl font-bold percent text-center">95%</h1>
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDBmc2N2MzJ0dGdoaXdnMHY1cG1pOTR6OGZ0bXF3eXZpMW9peGNkNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tlGD7PDy1w8fK/giphy.gif" alt="" class="w-[220px]">
+                    </div>
+                    <div class="flex justify-between w-full">
+                        <h4 class="text-white font-semibold bg-[#3ab5e0] w-[100px] text-center ">
+                            All</h4>
+                        <span class="text-lg font-semibold text-gray-700">5</span>
+                    </div>
+                    <div class="flex justify-between w-full">
+                        <h4 class="text-white font-semibold bg-[#3ab5e0] w-[100px] text-center ">
+                            Correct</h4>
+                        <span class="text-lg font-semibold text-gray-700"><span class="correctResult">2</span>/5</span>
+                    </div>
+                    <div class="flex justify-between w-full">
+                        <h4 class="text-white font-semibold bg-[#3ab5e0] w-[100px] text-center ">
+                            Wrong</h4>
+                        <span class="text-lg font-semibold text-gray-700"><span class="wrongResult">2</span>/5</span>
+                    </div>
+                </div>
+                <button class="text-sm uppercase rounded-lg px-5 py-2 border border-[#3ab5e0] text-white font-medium relative z-10 hover:text-[#3ab5e0] hover:shadow-md hover:-translate-y-1 active:translate-y-0 transition duration-300 before:absolute before:-z-10 before:bg-[#3ab5e0] before:inset-0 before:rounded-md hover:before:scale-x-0 before:transition before:duration-300 restartQuiz">Restart Quiz</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="absolute text-5xl font-bold text-[#3ab5e0] startText transition duration-500">
+        Let's check your basic GK
+    </div>
+    <script src="index.js"></script>
+</body>
+<!-- Change code above this line -->
+
+</html>
