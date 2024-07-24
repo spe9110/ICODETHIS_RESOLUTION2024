@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- styles css -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="w-[100%] h-full bg-[#7e22ce] flex items-center justify-center p-12">
+    <div class="container mx-auto w-[20rem] z-0 h-[40rem] bg-white overflow-hidden shadow-lg">
+        <!-- HEADER -->
+        <div class="header_card h-[50%] p-4 sticky">
+            <div class="absolute design w-[120%] h-[25rem] bg-purple-100 top-[-48%] left-[-10%] rounded-full z-0"></div>
+            <div class="header_card_icon w-full flex items-center justify-between text-purple-700 z-10 relative">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg>
+            </div>
+            <div class="image_profil flex items-center justify-start gap-1 z-10 mt-4">
+                <img class="profil w-[8rem] h-[8rem] border-purple-300 border-2 rounded-full object-cover z-10" src="https://images.unsplash.com/photo-1721733541739-cd723146215c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="a man picture">
+                <div class="job flex flex-col items-center justify-center gap-1 z-10">
+                    <h3 class="job_name text-lg font-bold">Spencer Wawaku</h3>
+                    <p class="job_description font-light ">Programmer</p>
+                    <button class="button pointer py-2 px-3 text-white bg-gradient-to-r from-purple-600 to-purple-900 flex items-center justify-center gap-1 rounded-full mt-2">
+                        <svg width="24" height="24"xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                          </svg>
+                        <span>Follow</span>
+                    </button>
+                </div>
+            </div>
+            <div class="icons_social_media flex flex-row items-center justify-center gap-0 w-[60%] mx-auto mt-4 z-10 cursor-pointer">
+                <!-- Lineicons -->
+                <svg class="text-purple-700 z-10" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="h-full w-full"><rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent" stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="256px" height="256px" viewBox="0 0 24 24" fill="currentColor" x="128" y="128" role="img" style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path fill="currentColor" d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.229 13.229 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.647 4.647 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.692 4.692 0 0 1-2.104.08a4.661 4.661 0 0 0 4.352 3.234a9.348 9.348 0 0 1-5.786 1.995a9.5 9.5 0 0 1-1.112-.065a13.175 13.175 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254c0-.2-.005-.402-.014-.602a9.47 9.47 0 0 0 2.323-2.41l.002-.003Z"/></g></svg></svg>
+                <svg class="text-purple-700 z-10" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="h-full w-full"><rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent" stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="256px" height="256px" viewBox="0 0 24 24" fill="currentColor" x="128" y="128" role="img" style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path fill="currentColor" d="M14.2 2.875A4.625 4.625 0 0 0 9.575 7.5v2.575H7.1c-.124 0-.225.1-.225.225v3.4c0 .124.1.225.225.225h2.475V20.9c0 .124.1.225.225.225h3.4c.124 0 .225-.1.225-.225v-6.975h2.497c.103 0 .193-.07.218-.17l.85-3.4a.225.225 0 0 0-.218-.28h-3.347V7.5a.775.775 0 0 1 .775-.775h2.6c.124 0 .225-.1.225-.225V3.1c0-.124-.1-.225-.225-.225h-2.6Z"/></g></svg></svg>
+                <svg class="text-purple-700 z-10" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="h-full w-full"><rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent" stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="256px" height="256px" viewBox="0 0 24 24" fill="currentColor" x="128" y="128" role="img" style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><g fill="none"><g clip-path="url(#akarIconsBehanceFill0)"><path fill="currentColor" d="M22 7h-7V5h7v2Zm1.726 10c-.442 1.297-2.029 3-5.101 3c-3.074 0-5.564-1.729-5.564-5.675c0-3.91 2.325-5.92 5.466-5.92c3.082 0 4.964 1.782 5.375 4.426c.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168Zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219c-1.466 0-2.277.768-2.488 2.219Zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906c3.461 1.26 3.577 8.061-3.207 8.061ZM3 11h3.584c2.508 0 2.906-3-.312-3H3v3Zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016Z"/></g><defs><clipPath id="akarIconsBehanceFill0"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></g></g></svg></svg>
+                <svg class="text-purple-700 z-10" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="h-full w-full"><rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent" stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="256px" height="256px" viewBox="0 0 24 24" fill="currentColor" x="128" y="128" role="img" style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><g fill="none"><g clip-path="url(#akarIconsYoutubeFill0)"><path fill="currentColor" d="M23.5 6.507a2.786 2.786 0 0 0-.766-1.27a3.05 3.05 0 0 0-1.338-.742C19.518 4 11.994 4 11.994 4a76.624 76.624 0 0 0-9.39.47a3.16 3.16 0 0 0-1.338.76c-.37.356-.638.795-.778 1.276A29.09 29.09 0 0 0 0 12c-.012 1.841.151 3.68.488 5.494c.137.479.404.916.775 1.269c.371.353.833.608 1.341.743c1.903.494 9.39.494 9.39.494a76.8 76.8 0 0 0 9.402-.47a3.05 3.05 0 0 0 1.338-.742a2.78 2.78 0 0 0 .765-1.27A28.38 28.38 0 0 0 24 12.023a26.579 26.579 0 0 0-.5-5.517ZM9.602 15.424V8.577l6.26 3.424l-6.26 3.423Z"/></g><defs><clipPath id="akarIconsYoutubeFill0"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></g></g></svg></svg>
+                <svg class="text-purple-700 z-10" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="h-full w-full"><rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent" stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="256px" height="256px" viewBox="0 0 24 24" fill="currentColor" x="128" y="128" role="img" style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path d="M5.077 9.457c0-.778.136-1.513.404-2.199a5.63 5.63 0 0 1 1.121-1.802a7.614 7.614 0 0 1 1.644-1.329a7.513 7.513 0 0 1 2.002-.844a8.57 8.57 0 0 1 2.185-.281c1.139 0 2.199.241 3.182.721a6.021 6.021 0 0 1 2.391 2.094c.614.915.919 1.95.919 3.104c0 .692-.068 1.369-.207 2.031a8.28 8.28 0 0 1-.646 1.913a6.605 6.605 0 0 1-1.082 1.617a4.723 4.723 0 0 1-1.568 1.114a4.962 4.962 0 0 1-2.045.417c-.489 0-.977-.115-1.459-.346c-.482-.23-.828-.546-1.036-.951c-.073.281-.173.687-.306 1.218c-.128.53-.214.872-.252 1.027c-.04.154-.114.411-.222.767a5.183 5.183 0 0 1-.281.769l-.344.674a7.98 7.98 0 0 1-.498.838c-.181.262-.405.575-.672.935l-.149.053l-.099-.108c-.107-1.133-.162-1.811-.162-2.035c0-.663.079-1.407.235-2.233c.153-.825.395-1.862.72-3.109c.325-1.246.511-1.979.561-2.196c-.229-.467-.345-1.077-.345-1.827c0-.599.187-1.16.562-1.688c.376-.526.851-.789 1.427-.789c.441 0 .783.146 1.028.439c.246.292.366.66.366 1.109c0 .476-.158 1.165-.476 2.066c-.318.902-.476 1.575-.476 2.022c0 .453.162.832.486 1.129a1.68 1.68 0 0 0 1.179.449c.396 0 .763-.09 1.104-.271a2.46 2.46 0 0 0 .849-.733a6.123 6.123 0 0 0 1.017-2.225c.096-.422.17-.823.216-1.2c.049-.379.07-.737.07-1.077c0-1.247-.396-2.219-1.183-2.915c-.791-.696-1.821-1.042-3.088-1.042c-1.441 0-2.646.466-3.611 1.401c-.966.932-1.452 2.117-1.452 3.554c0 .317.048.623.139.919c.089.295.186.53.291.704c.104.171.202.338.291.492c.09.154.137.264.137.33c0 .202-.053.465-.16.79c-.111.325-.242.487-.4.487c-.015 0-.077-.011-.185-.034a2.21 2.21 0 0 1-.979-.605a3.17 3.17 0 0 1-.659-1.022a6.986 6.986 0 0 1-.352-1.169a4.884 4.884 0 0 1-.132-1.153z" fill="currentColor"/></g></svg></svg>
+            </div>
+            <div class="statistic flex flex-row items-center justify-between mt-6 mx-8">
+                <div class="followers grid items-center text-center">
+                    <span class="followers_number font-bold text-xl">2344</span>
+                    <span class="followers_string text-sm">Followers</span>
+                </div>
+                <div class="following grid items-center text-center">
+                    <span class="following_number font-bold text-xl">4344</span>
+                    <span class="following_string text-sm">Following</span>
+                </div>
+            </div>
+        </div>
+        <!-- CONTENT -->
+        <div class="content_card w-full h-[50%] bg-blue-200 sticky">
+            <nav class="flex h-8 w-full flex-row items-center justify-center">
+                <ul class="flex h-8 w-full flex-row items-center justify-start pl-10 gap-8 bg-white">
+                    <li>
+                        <a href="#All" class="nav-link">All</a>
+                    </li>
+                    <li>
+                        <a href="#Photos" class="nav-link">Photos</a>
+                    </li>
+                    <li>
+                        <a href="#Videos" class="nav-link">Videos</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="All_Profil">
+                <div class="All_media">
+                    <img src="https://images.unsplash.com/photo-1720048171419-b515a96a73b8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="a woman picture">
+                    <img src="https://images.unsplash.com/photo-1721048149858-139c52892fc9?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="a woman picture">
+                    <img src="https://plus.unsplash.com/premium_photo-1674675647135-be6430c2d39b?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="a woman picture">
+                    <img src="https://images.unsplash.com/photo-1721201342276-3edf188d1335?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="interior design">
+                    <img src="https://images.unsplash.com/photo-1721733541739-cd723146215c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="a man picture">
+                    <img src="https://images.unsplash.com/photo-1721152839659-dabbacabd5d6?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="a man picture">
+                </div>
+                <div class="Photos">
+                    <img src="https://images.unsplash.com/photo-1720048171419-b515a96a73b8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="a woman picture">
+                    <img src="https://images.unsplash.com/photo-1721048149858-139c52892fc9?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="a woman picture">
+                    <img src="https://plus.unsplash.com/premium_photo-1674675647135-be6430c2d39b?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="a woman picture">
+                    <img src="https://images.unsplash.com/photo-1721201342276-3edf188d1335?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="interior design">
+                    <img src="https://images.unsplash.com/photo-1721733541739-cd723146215c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="a man picture">
+                    <img src="https://images.unsplash.com/photo-1721152839659-dabbacabd5d6?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="a man picture">   
+                </div>
+                <div class="Vidoes">
+                    <video src="https://videos.pexels.com/video-files/3122106/3122106-hd_1920_1080_25fps.mp4" controls width="640" height="360">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video src="https://videos.pexels.com/video-files/27021086/12049419_2560_1440_30fps.mp4" controls width="640" height="360">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video src="https://videos.pexels.com/video-files/17932288/17932288-uhd_2560_1440_30fps.mp4" controls width="640" height="360">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video src="https://videos.pexels.com/video-files/6963744/6963744-hd_1920_1080_25fps.mp4" controls width="640" height="360">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video src="https://videos.pexels.com/video-files/4974708/4974708-hd_1920_1080_25fps.mp4" controls width="640" height="360">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video src="https://videos.pexels.com/video-files/4709300/4709300-uhd_2732_1440_25fps.mp4" controls width="640" height="360">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
