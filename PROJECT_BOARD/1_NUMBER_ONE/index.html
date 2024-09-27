@@ -1,0 +1,175 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Remove the line below if you don't want to use TailwindCSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<!-- Change code below this line -->
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <button class="menu-icon" title="Open/Close Menu">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                    </svg>
+                </button>
+                <ul class="main-nav">
+                    <li class="main-item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="main-item">
+                        <a href="#">Projects</a>
+                    </li>
+                    <li class="main-item">
+                        <a href="#">Inbox</a>
+                    </li>
+                    <li class="main-item">
+                        <a href="#">Teams</a>
+                    </li>
+
+                </ul>
+            </nav>
+            <div class="header-right">
+                <button class="upgrade-btn" aria-label="Upgrade">
+                    <p>Upgrade</h2>
+                </button>
+                <div class="profile">
+                    <p>JG</p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <aside>
+                <div class="upper-projects">
+                    <h3>Projects</h3>
+                    <ul class="projects-list">
+                        <li class="project-item" data-project-id="3">boardme development</li>
+                        <li class="project-item" data-project-id="2">Feature lists</li>
+                        <li class="project-item" data-project-id="1">Marketing</li>
+                        <li class="project-item" data-project-id="4">UDD development</li>
+                        <li class="project-item" data-project-id="5">Topics
+                        </li>
+                        <li class="project-item" data-project-id="6">Bugs and fixes</li>
+                    </ul>
+                    <button class="view-btn" href="#">
+                        <p>View all</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="lower-teams">
+                    <h3>Teams</h3>
+                    <div class="teams">
+                        <h4>Need to form a team?</h4>
+                        <p>Try our 30 days trial an see what you can achieve together</p>
+                        <button class="try-btn" aria-label="Try Teams">
+                            <p>Try it Free</p>
+                        </button>
+                    </div>
+                </div>
+
+            </aside>
+            <div class="main-right">
+                <div class="main-right-upper">
+                    <h2>Projects</h2>
+                    <ul class="main-projects-list">
+                        <li class="main-project-item" data-main-project-id="1">
+                            <a href="#">
+                                <div><p class="initials">M</p></div>
+                                <p>Marketing</p>
+                            </a>
+                        </li>
+                        <li class="main-project-item" data-main-project-id="2">
+                            <a href="#">
+                                <div><p class="initials">Fl</p></div>
+                                <p>Feature lists</p>
+                            </a>
+                        </li>
+                        <li class="main-project-item" data-main-project-id="3">
+                            <a href="#">
+                                <div><p class="initials">bd</p></div>
+                                <p>boardme development</p>
+                            </a>
+                        </li>
+                        <li class="main-project-item" data-main-project-id="4">
+                            <a href="#">
+                                <div><p class="initials">Ud</p></div>
+                                <p>Udd development</p>
+                            </a>
+                        </li>
+                        <li class="main-project-item" data-main-project-id="5">
+                            <a href="#">
+                                <div><p class="initials">T</p></div>
+                                <p>Topics</p>
+                            </a>
+                        </li>
+                        <li class="main-project-item" data-main-project-id="6">
+                            <a href="#">
+                                <div><p class="initials">Bf</p></div>
+                                <p>Bugs and fixes</p>
+                            </a>
+                        </li>
+                        <li class="main-project-item add-project-item">
+                            <a class="add-btn" href="#">
+                                <div class="add-project">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+                                </div>
+                                <p>Add a project</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-right-lower">
+                    <button class="more-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                        </svg>
+                    </button>
+                    <a class="privacy" href="#">Privacy</a>
+                    <button class="help-btn">
+                        <p>?</p>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <dialog class="modal-add-new">
+        <h2>Add new project</h1>
+            <form class="add-new-form" action="">
+                <div class="input-modal-group">
+                    <input type="text" id="new-input" placeholder="Insert project name" required>
+
+                </div>
+                <button class="select-btn" type="submit">
+                    <p>Add project</p>
+                </button>
+            </form>
+            <button class="close-btn" title="Close" aria-label="close" formmethod="dialog">
+                    <span class="sr-only">close</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                </button>
+    </dialog>
+<script defer src="./index.js"></script>
+</body>
+<!-- Change code above this line -->
+
+</html>
