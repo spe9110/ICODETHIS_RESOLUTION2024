@@ -1,0 +1,458 @@
+:root{
+    /* --gray: #636669; */
+    --gray: #192A51;
+    --gray-200: #d8d8d8;
+    --gray-300: #8f8f91;
+    --white: #F3F3F3;
+    --tia: #fa3ad0;
+    --tia2: #fa3ad0bd;
+    --orange: #ff9e37;
+
+    --btn-hover: #343638;
+}
+
+
+/* CSS RESETS */
+/* ======================================================================== */
+
+*, ::after, ::before{
+    box-sizing: border-box;
+}
+
+*, ::placeholder{
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+}
+
+html{
+    color-scheme: dark light;
+}
+
+body{
+    min-height: 100vh;
+}
+
+img, picture, svg, video{
+    display: block;
+    max-width: 100%;
+}
+
+
+/* Project coding */
+/* ================================================================================= */
+body{
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+    color: var(--white);
+    display: grid;
+    place-content: center;
+    background-image: linear-gradient(to top, #27356d 0%, #2a3872 99%, #3c4772 100%);
+}
+
+li{
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.year-pre, .year-next, .year-now{
+    cursor: pointer;
+}
+
+.year-now{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.year-pre, .year-next{
+    color: var(--gray-300);
+    font-size: 0.875rem;
+}
+
+/* Layout */
+.container{
+    max-width: 1440px;
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.date-picker {
+    width: 600px;
+    height: 550px;
+    background-color: var(--gray);
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.date-picker > *{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 32px;
+}
+
+.date-header{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.year-pre, .year-next{
+    border: 2px solid var(--gray-200);
+    border-radius: 50%;
+    padding: 0.1rem;
+}
+
+.year-pre:hover, .year-next:hover{
+    border: 2px solid var(--white);
+}
+
+.day-header{    
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.day-header > * {
+    padding: 0 0.25rem;
+}
+
+
+.dates{
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    gap: 16px;
+    row-gap: 24px;
+    font-size: 0.875rem;
+}
+
+/* Change dates */
+button[data-date]{
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+}
+
+button[data-date].current, button[data-date].event, button[data-date].date-picked{
+    border-radius: 50%;
+}
+
+button[data-date].current{
+    background-image: linear-gradient(to top, var(--tia2) 0%, var(--tia) 100%);
+    box-shadow: rgb(242, 86, 247) 0px 50px 100px -20px, rgba(250, 5, 238, 0.3) 0px 30px 60px -30px;
+}
+
+button[data-date].event{
+    background-color: var(--orange);
+}
+
+button[data-date].date-picked{
+    background-color: var(--orange);
+}
+
+.current::after, .event::after, .date-picked::after{
+    color: var(--gray) !important;
+    font-weight: 700;
+}
+
+.gray::after{
+    color: var(--gray-300) !important;
+}
+
+
+button[data-date]:hover{
+    background-color: #cbd3f27e;
+    outline-offset: 3px;
+    border-radius: 50%;
+}
+
+button[data-date]{
+    position: relative;
+    width: 33px;
+    height: 33px;
+    color: transparent;
+}
+
+button[data-date]::after{
+    position: absolute;
+    content: attr(data-date);
+    color: var(--white);
+    display: grid;
+    place-content: center;
+    inset: 0;
+}
+
+.selected{
+    outline-offset: 2px;
+    outline: 2px solid;
+}
+
+.events{
+    background-color: #0e1c3dcb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    width: 250px;
+    text-align: center;
+    position: relative;
+}
+
+.event-day{
+    font-size: 0.875rem;
+}
+
+.event-day h4{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.btn-addevent{
+    background-image: linear-gradient(to top, var(--tia2) 0%, var(--tia) 100%);
+    box-shadow: rgb(242, 86, 247) 0px 50px 100px -20px, rgba(250, 5, 238, 0.3) 0px 30px 60px -30px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 100vh;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: all 0.4s ease-out;
+}
+
+.btn-addevent:hover{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.calender-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.calender-icon svg{
+    scale: 4;
+    opacity: 0.2;
+}
+
+.calender-icon.more-opacity{
+    opacity: 0.15;
+}
+
+.calender-icon p{
+    opacity: 0.4;
+    font-size: 0.75rem;
+    padding-top: 3rem;
+}
+
+@media screen and (max-width: 830px) {
+    .container{
+        max-width: 550px;
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .date-picker {
+        padding: 1.5rem 3rem;
+        gap: 4px;
+        width: initial;
+        height: 500px;
+    }
+
+    .events{
+        width: initial;
+        height: 450px;
+        padding: 2rem 1rem;
+    }
+
+    .date-picker > *{
+        gap: 16px;
+    }
+
+    .dates{
+        row-gap: 24px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .container{
+        width: 100%;
+    }
+}
+
+
+/* models */
+/* Model */ 
+.model{
+    /* display: none; */
+    visibility: hidden;
+    display: flex;
+    position: fixed;
+    background-color: #4155a5;
+    color: var(--white);
+    max-width: 350px;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    max-height: 100%;
+    padding: 1.5rem 2.5rem;
+    border-radius: 4px;
+    flex-direction: column;
+    gap: 8px;
+    transform: translate(-50%, -50%) scale(0.5);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.model-transition{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+@media screen and (max-width: 480px) {
+    .container{
+        width: 100%;
+    }
+
+    .event-layout{
+        width: 100%;
+    }
+
+    .date-picker {
+        padding: 1.5rem 1rem;
+    }
+
+    .model{
+        width: 90%;
+    }
+}
+
+
+.model h5{
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-around;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.btn{
+    background-color: #cbd3f27e;
+    padding: 0.25rem 1.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.btn:hover{
+    background-color: #b9c1df7e;
+}
+
+.btn-yes{
+    background-color: #f01919de;
+    color: var(--white);
+}
+
+.btn-yes:hover{
+    background-color: #c40909;
+}
+
+/* Model list */
+
+textarea, .model-list input{
+    color: var(--btn-hover);
+    padding: 8px;
+    border-radius: 4px;
+    border: 0;
+    background-color: var(--gray-200);
+}
+
+textarea{
+    resize: vertical;
+}
+
+textarea::placeholder{
+    color: var(--gray-300);
+}
+
+.select-icon{
+    display: flex;
+    justify-content: space-around;
+}
+
+.select-icon li{
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #b9c1df28;
+    padding: 0.5rem;
+}
+
+.select-icon li:hover{
+    background-color: #b9c1df7e;
+}
+
+label:not(label:nth-of-type(1)){
+    margin-top: 1rem;
+}
+
+.model-list .btns{
+    margin-top: 2rem;
+}
+
+.btn-closeModel{
+    padding: 0.35rem;
+    margin-left: auto;
+}
+
+/* event- list */
+.event-list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 2rem 0 4rem;
+    text-align: left;
+}
+
+.event-list > li{
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    gap: 8px;
+    background-color: rgba(146, 145, 219, 0.295);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.event-list > li:hover{
+    background-color: rgba(112, 111, 175, 0.295);
+}
+
+.event-cancel{
+    cursor: pointer;
+}
+
+.event-list p{
+    font-size: 0.75rem;
+    color: var(--gray-200);
+}

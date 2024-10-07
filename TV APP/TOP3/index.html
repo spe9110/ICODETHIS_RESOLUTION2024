@@ -1,0 +1,151 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT AWESOME FOR PSEUDO-ELEMENT CONTENT -->
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+
+        <!-- AKSHAR -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=akshar:300,400,500,600,700" rel="stylesheet" />
+        <link rel="stylesheet" href="./styles.css">
+</head>
+
+<!-- Change code below this line -->
+<body>
+    <section class="card">
+        <header class="header">
+            <nav class="nav-filters" aria-label="Content filters">
+                <div class="filter-group">
+                    <h2 id="time-filter-heading" class="visually-hidden">Filter by Time</h2>
+                    <ul class="nav-filter-time-list" aria-labelledby="time-filter-heading" role="group">
+                        <li class="nav-filter-item">
+                            <button class="lg uppercase" aria-pressed="false" data-timefilter="now">Now</button>
+                        </li>
+                        <li class="nav-filter-item">
+                            <button class="lg uppercase" aria-pressed="false" data-timefilter="coming up">Coming Up</button>
+                        </li>
+                        <li class="nav-filter-item">
+                            <button class="lg uppercase" aria-pressed="false" data-timefilter="today">Tonight</button>
+                        </li>
+                        <li class="nav-filter-item">
+                            <button class="lg uppercase" aria-pressed="false" data-timefilter="today">Today</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <h2 id="rating-filter-heading" class="visually-hidden">Filter by Rating</h2>
+                    <ul class="nav-filter-rating-list" aria-labelledby="rating-filter-heading" role="group">
+                        <li class="nav-filter-rating-item">
+                            <button aria-pressed="false" class="small" data-ratingfilter="popular">Popular</button>
+                        </li>
+                        <li class="nav-filter-rating-item">
+                            <button aria-pressed="false" class="small" data-ratingfilter="new">New</button>
+                        </li>
+                        <li class="nav-filter-rating-item">
+                            <button aria-pressed="false" class="small" data-ratingfilter="highest rated">Highest Rated</button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <button aria-label="Settings Menu"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></button>
+        </header>
+        <nav class="nav-sidebar" aria-labelledby="sidebar-heading">
+            <h2 id="sidebar-heading" class="visually-hidden">Content categories</h2>
+            <ul class="nav-sidebar-list" role="tablist">
+                <li class="nav-sidebar-item" role="none">
+                    <a href="#content-movies" role="tab" aria-selected="false" id="movies">
+                        <p class="xl uppercase">Movies</p>
+                        <p class="small">18 Channels</p>
+                    </a>
+                </li>
+                <li class="nav-sidebar-item" role="none">
+                    <a href="#content-music" role="tab" aria-selected="false" id="music">
+                        <p class="xl uppercase">Music</p>
+                        <p class="small">9 Channels</p>
+                    </a>
+                </li>
+                <li class="nav-sidebar-item" role="none">
+                    <a href="#content-series" role="tab" aria-selected="true" id="series" aria-current="page">
+                        <p class="xl uppercase">Series</p>
+                        <p class="small">6 Channels</p>
+                    </a>
+                </li>
+                <li class="nav-sidebar-item" role="none">
+                    <a href="#content-live" role="tab" aria-selected="false" id="live">
+                        <p class="xl uppercase">Live</p>
+                        <p class="small">16 Channels</p>
+                    </a>
+                </li>
+                <li class="nav-sidebar-item" role="none">
+                    <a href="#content-science" role="tab" aria-selected="false" id="science">
+                        <p class="xl uppercase">Science</p>
+                        <p class="small">11 Channels</p>
+                    </a>
+                </li>
+                <li class="nav-sidebar-item" role="none">
+                    <a href="#content-sports" role="tab" aria-selected="false" id="sports">
+                        <p class="xl uppercase">Sports</p>
+                        <p class="small">8 Channels</p>
+                    </a>
+                </li>
+                <li class="nav-sidebar-item" role="none">
+                    <a href="#content-news" role="tab" aria-selected="false" id="news">
+                        <p class="xl uppercase">News</p>
+                        <p class="small">14 Channels</p>
+                    </a>
+                </li>
+                <li class="nav-sidebar-item" role="none">
+                    <a href="#content-kids" role="tab" aria-selected="false" id="kids">
+                        <p class="xl uppercase">Kids</p>
+                        <p class="small">9 Channels</p>
+                    </a>
+                </li>
+                <li class="nav-sidebar-item" role="none">
+                    <a href="#content-lifestyle" role="tab" aria-selected="false" id="lifestyle">
+                        <p class="xl uppercase">Lifestyle</p>
+                        <p class="small">6 Channels</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <ul id="content-wrapper" class="content-wrapper" role="group">
+            <template id="content-item-template">
+                <li class="content-item" data-id
+                style="--_bg-img">
+                    <button class="btn-item">
+                    <div class="content-info">
+                        <div class="content-details row ai-end jc-sb gap-half">
+                            <div>
+                                <p class="lg uppercase ls-1 title" data-title>Snatch</p>
+                                <p class="small" data-details></p>
+                            </div>
+                            <time class="small" style="width: fit-content; flex-shrink: 0;" data-timeremaining>29 min. left</time>
+                        </div>
+                        <progress min="0" max="100" value="50"></progress>
+                    </div>
+                    </button>
+                </li>
+            </template>
+            
+        </ul>
+    </section>
+    <template id="single-item-template">
+    <div class="item-single-wrapper">
+        <div class="img-wrapper">
+            <img src="" alt="">
+        </div>
+
+        <div class="item-single-details">
+            <p class="xl uppercase" data-title>Breaking Bad</p>
+            <p class="small" data-description></p>
+        </div>
+    </div>
+    </template>
+    <script src="./index.js"></script>
+</body>
+<!-- Change code above this line -->
+
+</html>

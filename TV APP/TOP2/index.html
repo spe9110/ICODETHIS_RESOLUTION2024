@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Coding challenge - TV APP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css'>
+    <link rel="stylesheet" href="./styles.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
+    <script defer src="./index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="website">
+
+        <section class="layout">
+
+            <div class="up-app">
+                <div class="categories">
+                    <span><p>Movies</p> <small>18 channels</small><br></span>
+                    <span><p>Music</p><small>9 channels</small><br></span>
+                    <span><p>Series</p><small>6 channels</small><br></span>
+                    <span><p>Live</p><small>16 channels</small><br></span>
+                    <span><p>Science</p><small>11 channels</small><br></span>
+                    <span><p>Sports</p><small>6 channels</small><br></span>
+                    <span><p>News</p><small>14 channels</small><br></span>
+                    <span><p>Kids</p><small>9 channels</small><br></span>
+                    <span><p>Lifestyle</p><small>6 channels</small><br></span>
+                </div>
+                <div class="menu-main">
+                    <section>
+                        <div class="menu-up">
+                            <item>NOW</item>
+                            <item>COMING UP</item>
+                            <item>TONIGHT</item>
+                            <item>TODAY</item><br>
+                            <span>Popular</span> <span>New</span> <span>Highest Rated</span>
+                        </div>
+                        <div class="hamburger">|||</div>
+                    </section>
+                    <section class="movies-panel">
+                        <div class="movies-main">
+                            <span class="movie">
+            <img src="https://ntvb.tmsimg.com/assets/p9155926_b_h8_as.jpg?w=960&h=540">
+            <p class="movie-title">Vikings</p>
+            <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">28</span> min.</p></span>
+                            <div class="time-bar"><span class="tbb" style="width: 30%;"></span></div>
+                            </span>
+                            <span class="movie">
+            <img src="https://img.okezone.com/content/2022/05/03/206/2588989/novel-teranyar-game-of-thrones-akan-jadi-buku-terpanjang-george-rr-martin-WjFcUlzMID.jpg">
+            <p class="movie-title">Game of Thrones</p>
+            <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">12</span> min.</p></span>
+                            <div class="time-bar"><span class="tbb" style="width: 60%;"></span></div>
+                            </span>
+                            <span class="movie">
+            <img src="https://d1fmx1rbmqrxrr.cloudfront.net/zdnet/i/edit/ne/2018/06/tbbt_610.jpg">
+            <p class="movie-title">The Big Bang Theory</p>
+            <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">5</span> min.</p></span>
+                            <div class="time-bar"><span class="tbb" style="width: 5%;"></span></div>
+                            </span>
+                            <span class="movie">
+            <img src="https://flxt.tmsimg.com/assets/p15601707_b_h10_aa.jpg">
+            <p class="movie-title">Orange is the New Black</p>
+            <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">22</span> min.</p></span>
+                            <div class="time-bar"><span class="tbb" style="width: 20%;"></span></div>
+                            </span>
+                            <span class="movie">
+            <img src="https://m.media-amazon.com/images/S/pv-target-images/134f649dcc4873394463c6374bb990ada39ee3e62fec51f33391b529c9665d6b._UR1920,1080_.jpg">
+            <p class="movie-title">Mr. Robot</p>
+            <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">12</span> min.</p></span>
+                            <div class="time-bar"><span class="tbb" style="width: 12%;"></span></div>
+                            </span>
+                            <span class="movie">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/7540/617540-h">
+            <p class="movie-title">Modern Family</p>
+            <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">34</span> min.</p></span>
+                            <div class="time-bar"><span class="tbb" style="width: 34%;"></span></div>
+                            </span>
+                            <span class="movie">
+            <img src="https://ntvb.tmsimg.com/assets/p9155926_b_h8_as.jpg?w=960&h=540">
+            <p class="movie-title">Vikings</p>
+            <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">5</span> min.</p></span>
+                            <div class="time-bar"><span class="tbb" style="width: 80%;"></span></div>
+                            </span>
+                            <span class="movie">
+            <img src="https://img.okezone.com/content/2022/05/03/206/2588989/novel-teranyar-game-of-thrones-akan-jadi-buku-terpanjang-george-rr-martin-WjFcUlzMID.jpg">
+            <p class="movie-title">Game of Thrones</p>
+            <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">55</span> min.</p></span>
+                            <div class="time-bar"><span class="tbb" style="width: 55%;"></span></div>
+                            </span>
+                            <span class="movie">
+            <img src="https://d1fmx1rbmqrxrr.cloudfront.net/zdnet/i/edit/ne/2018/06/tbbt_610.jpg">
+            <p class="movie-title">The Big Bang Theory</p>
+            <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">30</span> min.</p></span>
+                            <div class="time-bar"><span class="tbb" style="width: 30%;"></span></div>
+                            </span>
+                            <span class="movie">
+            <img src="https://flxt.tmsimg.com/assets/p15601707_b_h10_aa.jpg">
+            <p class="movie-title">Orange is the New Black</p>
+            <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">15</span> min.</p></span>
+                            <div class="time-bar"><span class="tbb" style="width: 90%;"></span></div>
+                            </span>
+                            <span class="movie">
+            <img src="https://m.media-amazon.com/images/S/pv-target-images/134f649dcc4873394463c6374bb990ada39ee3e62fec51f33391b529c9665d6b._UR1920,1080_.jpg">
+            <p class="movie-title">Mr. Robot</p>
+            <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">2</span> min.</p></span>
+                            <div class="time-bar"><span class="tbb" style="width: 22%;"></span></div>
+                            </span>
+                            <span class="movie">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/7540/617540-h">
+            <p class="movie-title">Modern Family</p>
+            <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">34</span> min.</p></span>
+                            <div class="time-bar"><span class="tbb" style="width: 57%;"></span></div>
+                            </span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="down-panel">
+                <p class="feat">Featured series</p>
+                <wrapper class="list-movies">
+                    <span class="movie">
+      <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/7238583A12BC3EE570A6D8E240D67D0E6CACE9C782B434F7FFE09747512BDE0C/scale?width=1200&aspectRatio=1.78&format=jpeg">
+            <p class="movie-title">Family Guy</p>
+            <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">28</span> min.</p></span>
+                    <div class="time-bar"><span class="tbb" style="width: 30%;"></span></div>
+                    </span>
+                    <span class="movie">
+            <img src="https://media.suara.com/pictures/970x544/2020/06/05/20546-poster-film-the-man-from-uncle.jpg">
+            <p class="movie-title">The Man from U.N.C.L.E.</p>
+            <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">12</span> min.</p></span>
+                    <div class="time-bar"><span class="tbb" style="width: 60%;"></span></div>
+                    </span>
+                    <span class="movie">
+            <img src="https://discussingfilm.net/wp-content/uploads/2023/04/Star-Wars-Celebration-2023-Reveals-scaled.jpg">
+            <p class="movie-title">Star Wars: Skeleton Crew</p>
+            <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">5</span> min.</p></span>
+                    <div class="time-bar"><span class="tbb" style="width: 5%;"></span></div>
+                    </span>
+                    <span class="movie">
+            <img src="https://comics2film.com/images/1056/594/1/deadpool-teddy-bear.jpg">
+            <p class="movie-title">Dead Pool</p>
+            <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">22</span> min.</p></span>
+                    <div class="time-bar"><span class="tbb" style="width: 20%;"></span></div>
+                    </span>
+                    <span class="movie">
+            <img src="https://ntvb.tmsimg.com/assets/p9155926_b_h8_as.jpg?w=960&h=540">
+                  <p class="movie-title">Vikings</p>
+                  <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">28</span> min.</p>
+                    </span>
+                    <div class="time-bar"><span class="tbb" style="width: 30%;"></span></div>
+                    </span>
+                    <span class="movie">
+                  <img src="https://img.okezone.com/content/2022/05/03/206/2588989/novel-teranyar-game-of-thrones-akan-jadi-buku-terpanjang-george-rr-martin-WjFcUlzMID.jpg">
+                  <p class="movie-title">Game of Thrones</p>
+                  <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">12</span> min.</p>
+                    </span>
+                    <div class="time-bar"><span class="tbb" style="width: 60%;"></span></div>
+                    </span>
+                    <span class="movie">
+                  <img src="https://d1fmx1rbmqrxrr.cloudfront.net/zdnet/i/edit/ne/2018/06/tbbt_610.jpg">
+                  <p class="movie-title">The Big Bang Theory</p>
+                  <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">5</span> min.</p>
+                    </span>
+                    <div class="time-bar"><span class="tbb" style="width: 5%;"></span></div>
+                    </span>
+                    <span class="movie">
+                  <img src="https://flxt.tmsimg.com/assets/p15601707_b_h10_aa.jpg">
+                  <p class="movie-title">Orange is the New Black</p>
+                  <span class="title-time"><p>Portage S4, Ep. 8</p><p>Starting in: <span id="time">22</span> min.</p>
+                    </span>
+                    <div class="time-bar"><span class="tbb" style="width: 20%;"></span></div>
+                    </span>
+                </wrapper>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>

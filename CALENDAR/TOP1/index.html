@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="date-picker">
+            <div class="date-header">
+                <div class="year-pre">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M15 6l-6 6l6 6"></path>
+                    </svg>
+                </div>
+                <div class="year-now">
+                    <span class="month-only"></span>,
+                    <span class="year-only"></span>
+                </div>
+                <div class="year-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 6l6 6l-6 6"></path>
+                    </svg>
+                </div>
+            </div>
+        
+            <ul class="day-header">
+                <li>sun</li>
+                <li>mon</li>
+                <li>tue</li>
+                <li>wed</li>
+                <li>thr</li>
+                <li>fri</li>
+                <li>sat</li>
+            </ul>
+        
+            <div class="dates">
+
+            </div>
+        </div>
+
+        <div class="events">
+            <div class="event-day">
+                <h4 class="setDayName">Monday</h4>
+                <p class="setDateValue">Aug 14</p>
+
+                <ul class="event-list">
+                    
+                </ul>
+            </div>
+
+            <div class="calender-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event" width="24" height="24"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                    <path d="M16 3l0 4"></path>
+                    <path d="M8 3l0 4"></path>
+                    <path d="M4 11l16 0"></path>
+                    <path d="M8 15h2v2h-2z"></path>
+                </svg>
+                
+                <p class="no-event">No events for this day</p>
+            </div>
+
+            <div class="btn btn-addevent">
+                Add Event
+            </div>
+        </div>
+    </div>
+
+    <div class="model model-list">
+        <div class="btn btn-closeModel">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M18 6l-12 12"></path>
+                <path d="M6 6l12 12"></path>
+            </svg>
+        </div>
+    
+        <label for="title">Event Title</label>
+        <textarea type="text" name="title" id="title" placeholder="Ex: Select a gift for Florin Pop" rows="3"></textarea>
+    
+        <label for="time">Select Time</label>
+        <input type="time" name="time" id="time">
+    
+    
+        <div class="btns">
+            <div class="btn btn-addlist">Save List</div>
+        </div>
+    </div>
+    <template id="template-list">
+        <li>
+            <div>
+                <h5>P</h5>
+                <p>10:12 PM</p>
+            </div>
+        </li>
+    </template>
+    <script src="./index.js"></script>
+</body>
+
+</html>
