@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT AWESOME FOR PSEUDO-ELEMENT CONTENT -->
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+    <!-- JOST -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css">
+</head>
+
+<!-- Change code below this line -->
+<body>
+    <section class="card">
+        <header class="header">
+            <nav class="nav row jc-sb gap-1">
+                <button><i class="fa-regular fa-chevron-left fa-lg"></i></button>
+                <button><i class="fa-solid fa-ellipsis fa-lg"></i></button>
+            </nav>
+
+            <section class="user row jc-cen gap-1">
+                <div class="img-wrapper"><img src="https://i.pravatar.cc/80?img=47" alt=""></div>
+                <div class="details">
+                    <p class="lg bold">Mia Collins</p>
+                    <p class="lg">Photographer</p>
+                    <button class="btn-follow small row jc-cen ai-cen gap-quarter">
+                        <i class="fa-regular fa-plus"></i>
+                        <p>Follow</p>
+                    </button>
+                </div>
+            </section>
+
+            <div class="row jc-cen gap-1 small">
+                <a href="javascript: void(0)" class="btn-socials"><i class="fa-brands fa-twitter"></i></a>
+                <a href="javascript: void(0)" class="btn-socials"><i class="fa-brands fa-facebook"></i></a>
+                <a href="javascript: void(0)" class="btn-socials"><i class="fa-brands fa-behance"></i></a>
+                <a href="javascript: void(0)" class="btn-socials"><i class="fa-brands fa-youtube"></i></a>
+                <a href="javascript: void(0)" class="btn-socials"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+        </header>
+        <main class="main">
+            <div class="curve">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="stats">
+                <div class="row jc-sb gap-1">
+                    <ul>
+                        <li class="bold xl">2589</li>
+                        <li>Followers</li>
+                    </ul>
+
+                    <ul>
+                        <li class="bold xl">1896</li>
+                        <li>Following</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row gap-2 tab-btns small">
+                <button class="btn-tab" aria-label="See Posts-All" aria-selected="false" aria-controls="all-posts">All</button>
+                <button class="btn-tab" aria-label="See Posts-Photos Only" aria-selected="true" aria-controls="photos-posts">Photos</button>
+                <button class="btn-tab" aria-label="See Posts-Videos Only" aria-selected="false" aria-controls="videos-posts">Videos</button>
+            </div>
+            <ul class="grid posts-grid">
+                <li class="post"><button data-post="photo"><img src="https://images.unsplash.com/photo-1432251407527-504a6b4174a2?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></button></li>
+                <li class="post"><button data-post="photo"><img src="https://images.unsplash.com/photo-1510673209043-af92bcbee205?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></button></li>
+                <li class="post"><button data-post="photo"><img src="https://images.unsplash.com/photo-1594760467013-64ac2b80b7d3?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></button></li>
+                <li class="post"><button data-post="photo"><img src="https://images.unsplash.com/photo-1486673748761-a8d18475c757?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></button></li>
+                <li class="post"><button data-post="photo"><img src="https://images.unsplash.com/photo-1540390769625-2fc3f8b1d50c?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></button></li>
+                <li class="post"><button data-post="photo"><img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></button></li>
+                <li class="post"><button data-post="photo"><img src="https://images.unsplash.com/photo-1573157726810-b51b782f3bfd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></button></li>
+                <li class="post"><button data-post="photo"><img src="https://images.unsplash.com/photo-1532028205213-4c4fa81306d4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></button></li>
+                <li class="post"><button data-post="photo"><img src="https://images.unsplash.com/photo-1603039548092-fff996c2441c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></button></li>
+            </ul>
+        </main>
+
+    </section>
+
+    <dialog class="modal">
+        <button btn-close class="grid pi-cen"><i class="fa-regular fa-xmark"></i></button>
+        <img src="" alt="" data-modal-image="true">
+        <video src="" data-modal-video="false"></video>
+    </dialog>
+    <script defer src="./index.js"></script>
+</body>
+<!-- Change code above this line -->
+
+</html>

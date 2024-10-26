@@ -1,0 +1,8 @@
+/* Add CSS here */
+hr {
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.2;
+    margin-top: rem;
+}

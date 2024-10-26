@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT AWESOME FOR PSEUDO-ELEMENT CONTENT -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+    <!-- BEBAS NEUE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<!-- Change code below this line -->
+
+<body>
+    <div class="wrapper">
+        <div class="slider-outer">
+            <div class="slider-inner row ai-cen gap-2"></div>
+            <nav class="nav">
+                <button id="prev" aria-label="Previous Product">
+                    <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>
+                </button>
+                <button id="next" aria-label="Next Product">
+                    <i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i>
+                </button>
+            </nav>
+        </div>
+    </div>
+    <template id="product-item-template">
+        <div class="slide card">
+            <div class="product-info">
+                <div class="product-header-wrapper">
+                    <hgroup>
+                        <h2 data-category>Bag</h2>
+                        <h3 class="accent xl"><span data-brand>Hermes</span> <span data-model>Birkin Bag</span></h3>
+                    </hgroup>
+                    <p data-description class="mbs-half">The Birkin bag (or simply Birkin) is a tote bag introduced in
+                        1984 by French luxury goods maker Hermès. Birkin bags are handmade from leather and are named
+                        after the English-French actress and singer Jane Birkin.</p>
+                </div>
+                <div class="product-details-wrapper row gap-1">
+                    <div class="color-wrapper">
+                        <p class="uppercase lg ls-1">Color</p>
+                        <ul class="colors-list mbs-half row gap-half" role="list">
+                            <li class="color-item">
+                                <button class="selected"></button>
+                            </li>
+                            <li class="color-item">
+                                <button></button>
+                            </li>
+                            <li class="color-item">
+                                <button></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="size-wrapper">
+                        <p class="uppercase lg ls-1">Size</p>
+                        <ul class="sizes-list mbs-half row gap-half" role="list" data-brand>
+                            <li class="sizes-item">
+                                <button>25</button>
+                            </li>
+                            <li class="sizes-item">
+                                <button class="grid pc-cen">30</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <button class="btn uppercase lg ls-1">Add to Bag</button>
+            </div>
+            <div class="product-img-wrapper">
+                <div class="img-wrapper">
+                    <img src="https://i.imgur.com/hqVQq0v.png" alt="">
+                </div>
+            </div>
+        </div>
+    </template>
+
+<script src="./index.js"></script>
+</body>
+<!-- Change code above this line -->
+
+</html>
