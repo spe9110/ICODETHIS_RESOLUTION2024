@@ -594,3 +594,4 @@ window.addEventListener("resize", handleViewportChange);
 // sections.forEach((section) => {
 //   console.log(section.id);
 // });
+
