@@ -1,0 +1,260 @@
+/* Add CSS here */
+
+/* variables */
+:root {
+    --clr-primario:	hsla(241, 46%, 21%, 1);
+    --clr-secundario: white;
+    --clr-bg: 	hsla(247, 53%, 97%, 1);
+    --clr-bg-categories: rgb(232, 228, 255, .7);
+    --clr-bg-categories-hover: rgb(232, 228, 255, 1);
+    --clr-box-shadow: hsla(223, 85%, 65%, .1);
+    --ff-primaria: 'Montserrat', sans-serif;
+    --ff-secundaria: 'Lisu Bosa', serif;
+    --fs-primaria: 1rem;
+}
+
+
+/* Estilos Reset */
+*,
+*:before, 
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+}
+
+img, svg {
+    max-width: 100%;
+    display: block;
+}
+
+
+input, select, button {
+    font: inherit;
+}
+
+/* Estilos principales */
+
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: var(--ff-primaria);
+    font-size: var(--fs-primaria);
+    font-weight: 600; 
+    background-color: var(--clr-bg);
+    color: var(--clr-primario);
+    user-select: none;
+}
+
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: clamp(22rem, 100vw, 60rem);
+    margin-block: 2rem;
+    margin-inline: auto;
+    padding-block: 3.5rem;
+    padding-inline: 5rem;
+    background-color: var(--clr-secundario);
+    border-radius: 1.2rem;
+    box-shadow: 20px 0px 40px var(--clr-box-shadow);
+}
+
+.container:before {
+    position: absolute;
+    content: '';
+    top: -2.2rem;
+    bottom: -2.2rem;
+    left: 2rem;
+    right: 2rem;
+    background-color: var(--clr-primario);
+    border-radius: 1.2rem;
+    z-index: -1;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+h1 {
+    font-family: var(--ff-secundaria);
+    font-size: 1.7rem;
+    
+}
+
+.header > p {
+    width: 60%;
+    text-align: center;
+}
+
+
+ul.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-block-start: .5rem;
+    list-style: none;
+}
+
+li.content-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .4rem;
+    padding-block: .15rem;
+    padding-inline: .4rem;
+    font-weight: 550;
+    background-color: var(--clr-bg-categories);
+    border: 1px solid var(--clr-bg-categories-hover);
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: background-color .250s ease-in-out;
+}
+
+li.content-item:hover {
+    background-color: var(--clr-bg-categories-hover);
+}
+
+li.content-item > svg {
+    width: 1.5rem;
+    font-weight: 400;
+    stroke-width: 1;
+}
+
+li.content-item:nth-child(1) svg {
+    transform: rotate(-45deg);
+}
+
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    gap: 1rem;
+}
+
+.carousel svg {
+    width: 3rem;
+    cursor: pointer;
+}
+
+
+.carousel-slide {
+    flex: 0 0 100%;
+    width: 39rem;
+    max-width: 39rem;
+    overflow: hidden;
+}
+
+.carousel-items {
+    display: flex;
+    align-items: center;
+    width: 39rem;
+    max-width: 39rem;
+    flex: 0 0 100%;
+}
+
+.carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    width: 13rem;
+    padding-block: 1rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+}
+
+.carousel-item > img {
+    width: 5rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.carousel-item > p {
+   font-family: var(--ff-secundaria);
+   font-size: 1.35rem;
+   font-weight: 700;
+}
+
+
+.carousel-item > span {
+   margin-block-start: -.3rem;
+   font-size: .8rem;
+   font-weight: 700;
+}
+
+.carousel-item > button {
+    margin-block-start: .5rem;
+    padding-block: .4rem;
+    padding-inline: .9rem;
+    background-color: var(--clr-primario);
+    color: var(--clr-secundario); 
+    font-size: .8rem;
+    font-weight: 400;
+    letter-spacing: .02rem;;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: all .250s ease-in-out;
+}
+
+.carousel-item > button:hover {
+    background-color: var(--clr-secundario);
+    color: var(--clr-primario);
+    border-color: var(--clr-primario);
+}
+
+@media (max-width: 60rem) {
+    
+    .carousel-slide {
+        width: 26rem;
+        max-width: 26rem;
+    }
+
+    .carousel-items {
+        width: 26rem;
+        max-width: 26rem;
+    }
+
+}
+
+@media (max-width: 46rem) {
+    
+    .container {
+        margin-inline: 0;
+        padding-inline: .8rem;
+    }
+
+    .carousel-slide {
+        width: 13rem;
+        max-width: 13rem;
+    }
+
+    .carousel-items {
+        width: 13rem;
+        max-width: 13rem;
+    }
+
+    .header > p {
+        width: 90%;
+    }
+
+}

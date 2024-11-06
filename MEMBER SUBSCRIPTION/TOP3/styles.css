@@ -1,0 +1,154 @@
+/* Add CSS here */
+:root {
+    --bg-clr: #f3f2fb;
+    --bg-container-cl: #ffffff;
+    --accent-clr: #1c1b4e;
+    --accent_2-clr: #e7e6ee;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: var(--bg-clr);
+  }
+  .container_subsc {
+    position: relative;
+    width: 44rem;
+    background-color: #ffffff;
+    padding: 2rem 1.5rem 3rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 5px 5px 7px rgba(0 0 0 / 0.2);
+  }
+  .container_subsc::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    margin: auto;
+    width: 85%;
+    height: 110%;
+    background-color: var(--accent-clr);
+    z-index: -1;
+    border-radius: 1rem;
+  }
+  .subsc_title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-clr);
+    margin-bottom: 1rem;
+  }
+  .text_wrapper {
+    width: 45ch;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+  }
+  .subsc_text {
+    line-height: 1.1rem;
+    color: var(--accent-clr);
+    margin-bottom: 1rem;
+  }
+  .subsc_content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .btn {
+    background-color: var(--accent_2-clr);
+    padding: 3px 10px;
+    border-radius: 100vw;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.4s all;
+  }
+  .btn:hover {
+    background-color: var(--accent-clr);
+    color: var(--accent_2-clr);
+  }
+  .btn:hover .icon {
+    color: var(--accent_2-clr);
+  }
+  .btn .icon {
+    margin-right: 0.5rem;
+    color: var(--accent-clr);
+  }
+  .btn:first-child .icon {
+    rotate: -45deg;
+  }
+  .subsc_testimonials {
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .arrow {
+    font-size: 2.5rem;
+    color: var(--accent-clr);
+    cursor: pointer;
+    transition: 0.4s all;
+  }
+  .arrow:hover {
+    scale: 1.2;
+    rotate: 360deg;
+  }
+  .testimonial_wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    width: 80%;
+    gap: 0.4rem;
+    overflow: hidden;
+    transition: 0.5s all;
+    padding: 0.5rem;
+  }
+  .testimonial {
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+    box-shadow: 1px 1px 3px rgba(0 0 0 /0.2);
+    transition: 0.4s all;
+    overflow: hidden;
+  }
+  .testimonial:hover {
+    background-color: var(--accent_2-clr);
+  }
+  .testimonial img {
+    margin-inline: auto;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.8rem;
+  }
+  .testimonial h3 {
+    color: var(--accent-clr);
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .testimonial p {
+    font-size: 0.7rem;
+    color: grey;
+    margin-bottom: 0.3rem;
+  }
+  .testimonial .testimonial_btn {
+    background-color: var(--accent-clr);
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 100vw;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.4s all;
+    border: 1px solid var(--accent-clr);
+  }
+  .testimonial .testimonial_btn:hover {
+    background-color: var(--bg-container-cl);
+    color: var(--accent-clr);
+  }
+  
