@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#181028] flex flex-col md:flex-row justify-center items-center min-h-screen">
+    <aside id="chat-list" class="bg-purple-900 text-white shadow-lg w-full max-w-md">
+        <h1 class="text-3xl font-bold p-4 text-center border-b">Flo's Chat</h1>
+        <ul id="conversations-wrapper"></ul>
+    </aside>
+
+    <section class="bg-slate-100 shadow-lg w-full max-w-xl hidden">
+        <ul id="messages-wrapper"></ul>
+
+        <form id="message-form" class="relative">
+            <input id="message-input" class="bg-white w-full p-8" type="text" placeholder="Type your message here"/>
+            <button class="flex items-center justify-center absolute right-0 top-0 h-full aspect-square text-purple-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="42" height="42"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M10 14l11 -11"></path>
+                    <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5"></path>
+                </svg>
+            </button>
+        </form>
+    </section>
+
+    <a href="https://www.youtube.com/watch?v=pXH5c364M0M" target="_blank" class="flex items-center justify-between gap-4 bg-red-500 text-white rounded py-2 px-8 fixed bottom-4 left-4 animate-bounce hover:bg-white hover:text-[#181028]">
+        Watch me build it live 
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube-filled"   width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z" stroke-width="0" fill="currentColor"></path>
+        </svg>
+    </a>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
