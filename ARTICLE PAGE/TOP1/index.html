@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Remove the line below if you don't want to use TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<!-- Change code below this line -->
+
+<body class="bg-gray-300 flex justify-center min-h-screen p-12">
+    <main class="container bg-white  rounded-xl pb-12">
+        <header class="w-full border-b px-12 py-8">
+            <nav class="flex justify-between items-center w-full">
+                <button class="md:hidden" id="menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="w-12 h-12">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+                <ul class="md:flex md:space-x-6 md:static absolute top-[140px] p-3 space-y-3 *:capitalize md:space-y-0 hidden bg-white shadow-md w-[150px] md:w-fit md:shadow-none"
+                    id="menu">
+                    <li
+                        class="inline-flex items-center gap-1 group cursor-pointer hover:scale-105 hover:font-bold transition-all">
+                        <span>product</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-5 h-5 group-hover:rotate-90 tranistion-all duration-200">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </li>
+                    <li class="cursor-pointer hover:scale-105 hover:font-bold transition-all">pricing</li>
+                    <li
+                        class="inline-flex items-center gap-1 group cursor-pointer hover:scale-105 hover:font-bold transition-all">
+                        <span>uase cases</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-5 h-5 group-hover:rotate-90 tranistion-all duration-200">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </li>
+                    <li class="cursor-pointer hover:scale-105 hover:font-bold transition-all">blog</li>
+                </ul>
+                <div class="flex gap-4">
+                    <button class="px-5 hover:scale-95 transition-all duration-300 hover:shadow-xl py-2 border capitalize rounded-full border-indigo-950 text-indigo-900">log in</button>
+                    <button class="px-5 hover:scale-95 transition-all duration-300 hover:shadow-xl py-2 capitalize rounded-full bg-indigo-950 text-white">get started</button>
+                </div>
+
+            </nav>
+        </header>
+        <section class="md:px-10 px-2 py-5 flex lg:flex-row flex-col-reverse items-center">
+            <ul id="artical-tags"
+                class="flex gap-3 capitalize items-center justify-center mt-5 md:mt-0 h-14 flex-wrap md:flex-nowrap">
+            </ul>
+            <div class="flex flex-row-reverse items-center  w-full gap-2">
+                <label for="search" class="p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+            </label>
+                <input type="search" class=" h-12 grow lg:grow-0 md:w-[200px] lg:w-[300px] xl:w-[400px] ring-1 flex-none rounded-full outline-none px-5" id="search">
+            </div>
+        </section>
+        <section class="px-10 flex flex-col lg:flex-row">
+            <article class="space-y-5 lg:w-1/2 w-full py-4 px-2">
+                <h1 class="text-5xl font-bold capitalize">productivity</h1>
+                <img src="https://images.pexels.com/photos/2105416/pexels-photo-2105416.jpeg?auto=compress&cs=tinysrgb&w=600" class="rounded-lg">
+                <h2 class="text-4xl capitalize font-bold">little things do make a difference</h2>
+                <p class="text-sm w-[90%]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam nihil, distinctio
+                    voluptates, cum maxime eligendi molestiae exercitationem in doloribus, Lorem ipsum dolor sit amet
+                    consectetur, adipisicing elit. Dolorum, maxime? Sit, iusto repellendus! Laboriosam, quisquam neque.
+                    Nihil nisi soluta ipsum?</p>
+                <div class="flex items-center gap-3">
+                    <img src="https://images.pexels.com/photos/14638899/pexels-photo-14638899.jpeg?auto=compress&cs=tinysrgb&w=600" class="size-14 rounded-full" alt="">
+                    <h3 class="text-xl capitalize font-thin">kathryn shelton</h3>
+                </div>
+            </article>
+            <section class="lg:w-1/2 w-full">
+                <h1 class="text-5xl lg:my-4 mt-12 mb-6 capitalize font-bold">recent articals</h1>
+                <div id="resent-articals" class="space-y-4"></div>
+            </section>
+        </section>
+    </main>
+    <script src="./index.js"></script>
+</body>
+<!-- Change code above this line -->
+
+</html>

@@ -1,0 +1,926 @@
+@import url("https://fonts.bunny.net/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.bunny.net/css2?family=Mulish:wght@200..1000&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root,
+[data-theme="light"] {
+    --font-1-family: Mulish, sans-serif;
+    --font-1-weight-normal: 600;
+    --font-1-weight-bold: 700;
+    --font-2-family: Merriweather, sans-serif;
+    --font-2-weight-normal: 400;
+    --font-2-weight-bold: 700;
+    --line-height: 1.25;
+    --width-border: 0.0625rem;
+    --width-stroke-icon: 0.1rem;
+    --radius-small: 0.25rem;
+    --radius-medium: 0.5rem;
+    --radius-large: 1rem;
+    --size-small: clamp(0.5rem, 3vw, 1rem);
+    --size-medium: clamp(0.5rem, 5vw, 1.5rem);
+    --size-large: clamp(0.5rem, 8vw, 4rem);
+    --speed-fast: 300ms;
+    --speed-medium: 500ms;
+    --speed-slow: 1500ms;
+    --timing-function-default: ease-in-out;
+    --l: 0.52;
+    /* base color lightness */
+    --c: 0.17;
+    /* base color chroma */
+    --h: 270;
+    /* base color hue */
+    --color-text-1: oklch(calc(var(--l) - 0.3) calc(var(--c) - 0.15) var(--h));
+    --color-text-2: oklch(calc(var(--l) + 0) calc(var(--c) - 0.15) var(--h));
+    --color-text-button: #fff;
+    --color-background-1: oklch(calc(var(--l) + 0.41) calc(var(--c) - 0.15) var(--h));
+    --color-background-2: #fff;
+    --color-background-modal: var(--color-background-2);
+    --color-accent-1: oklch(var(--l) var(--c) var(--h));
+    --color-link-1: oklch(calc(var(--l) - 0.05) var(--c) var(--h));
+    --color-link-1-hover: oklch(calc(var(--l) + 0.05) var(--c) var(--h));
+    --color-link-2: oklch(calc(var(--l) - 0.05) calc(var(--c) + 0) calc(var(--h) + 180));
+    --color-link-2-hover: oklch(calc(var(--l) + 0.05) calc(var(--c) + 0) calc(var(--h) + 180));
+    --color-border: oklch(calc(var(--l) - 0.18) calc(var(--c) - 0.15) var(--h) / 0.25);
+    --color-backdrop: #0008;
+    --filter-backdrop: blur(5px);
+    --filter-image: none;
+    --gradient-1: linear-gradient(315deg, var(--color-background-1), var(--color-background-2));
+    --shadow-1: 0 0.5rem 1.5rem oklch(calc(var(--l) + 0) calc(var(--c) - 0.05) var(--h) / 0.25);
+    --shadow-2: 0 0 1rem var(--color-background-1);
+    --shadow-modal: 0 0 2rem #0008;
+    color: var(--color-text-1);
+    color-scheme: only light;
+}
+
+[data-theme="dark"] {
+    --color-text-1: oklch(calc(var(--l) + 0.45) calc(var(--c) - 0.15) var(--h));
+    --color-text-2: oklch(calc(var(--l) + 0.14) calc(var(--c) - 0.13) var(--h));
+    --color-text-button: #000;
+    --color-background-1: oklch(calc(var(--l) - 0.2) calc(var(--c) - 0.15) var(--h));
+    --color-background-2: #000;
+    --color-link-1: oklch(calc(var(--l) + 0.15) var(--c) var(--h));
+    --color-link-1-hover: oklch(calc(var(--l) + 0.25) var(--c) var(--h));
+    --color-link-2: oklch(calc(var(--l) + 0.15) calc(var(--c) + 0) calc(var(--h) + 180));
+    --color-link-2-hover: oklch(calc(var(--l) + 0.25) calc(var(--c) + 0) calc(var(--h) + 180));
+    --color-border: oklch(calc(var(--l) + 0.35) calc(var(--c) - 0.2) var(--h) / 0.4);
+    --color-backdrop: #fff2;
+    --filter-image: brightness(0.9);
+    --shadow-1: 0 0.5rem 1rem oklch(calc(var(--l) - 0.3) calc(var(--c) - 0.12) var(--h) / 0.75);
+    --shadow-modal: 0 0 2rem #fff2;
+    color: var(--color-text-1);
+    color-scheme: only dark;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+::backdrop {
+    backdrop-filter: var(--filter-backdrop);
+    background-color: var(--color-backdrop);
+}
+
+:focus {
+    outline: 0.375rem double #000;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 0.25rem solid var(--color-accent-1);
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.15rem var(--color-background-modal);
+}
+
+/* Visually hide text while keeping it accessible */
+/* Source: https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
+.visually-hidden:not(:focus):not(:active) {
+    /* shrink to a 1px square */
+    width: 1px;
+    height: 1px;
+
+    /* hide any resulting overflow */
+    overflow: hidden;
+
+    /* clip the element to remove any visual trace */
+    clip: rect(0 0 0 0);
+    /* for IE only */
+    clip-path: inset(50%);
+
+    /* remove from page flow so it doesn’t affect surrounding layout */
+    position: absolute;
+
+    /* ensure proper text announcement by screen readers */
+    white-space: nowrap;
+}
+
+.skip-link {
+    position: fixed;
+    background-color: var(--color-background-1);
+    padding: 1rem;
+    inset-block-start: 0.75rem;
+    inset-inline-start: 0.75rem;
+    text-decoration: none;
+    box-shadow: 0 0 0 0.75rem var(--color-background-1);
+}
+
+img,
+svg {
+    block-size: auto;
+    max-inline-size: 100%;
+}
+
+img,
+svg:not(.icon) {
+    filter: var(--filter-image);
+}
+
+svg.icon {
+    stroke-width: var(--width-stroke-icon, 1);
+    stroke: currentColor;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-1-family);
+    font-weight: var(--font-1-weight-bold);
+    margin: 0;
+    text-wrap: balance;
+}
+
+a {
+    color: var(--color-link-1);
+    transition: color var(--speed-fast) var(--timing-function-default);
+}
+
+a:focus-visible,
+a:hover {
+    color: var(--color-link-1-hover);
+}
+
+p {
+    margin: 0;
+}
+
+input,
+textarea {
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="reset"]):not([type="submit"]):not([type="button"]):not([type="range"]),
+textarea {
+    block-size: 3rem;
+    border: var(--width-border) solid var(--color-border);
+    border-radius: var(--radius-small);
+    display: flex;
+    inline-size: 100%;
+    max-inline-size: 100%;
+    padding-inline: 1rem;
+}
+
+textarea {
+    block-size: 6rem;
+    min-block-size: 6rem;
+    resize: block;
+    padding-block: 0.5rem;
+}
+
+input[type="checkbox"]:not(.toggle) {
+    align-items: center;
+    appearance: none;
+    block-size: 1.8rem;
+    border: var(--width-border) solid var(--color-border);
+    border-radius: var(--radius-small);
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    inline-size: 1.8rem;
+    justify-content: center;
+    padding: calc(2 * min(0.1rem, var(--width-border)));
+}
+
+input[type="checkbox"]:not(.toggle)::before {
+    color: var(--color-accent-1);
+    content: "";
+    block-size: 100%;
+    max-block-size: 1.1rem;
+    aspect-ratio: 2/3;
+    border-block-end: max(0.25rem, var(--width-border)) solid var(--color-accent-1);
+    border-inline-end: max(0.25rem, var(--width-border)) solid var(--color-accent-1);
+    transform: translateY(calc(-0.5 * max(0.25rem, var(--width-border)))) rotate(45deg);
+    scale: 0;
+    transition: scale var(--speed-fast) var(--timing-function-default);
+}
+
+input[type="checkbox"]:not(.toggle):checked::before {
+    scale: 1;
+}
+
+input[type="checkbox"].filled::before {
+    border-color: var(--color-text-button);
+}
+
+input[type="checkbox"].filled:checked {
+    border-color: var(--color-accent-1);
+    background-color: var(--color-accent-1);
+}
+
+input[type="checkbox"].toggle {
+    align-items: center;
+    appearance: none;
+    block-size: 1.8rem;
+    border: var(--width-border) solid var(--color-border);
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    border-radius: 0.9rem;
+    inline-size: 3.25rem;
+    justify-content: start;
+    margin: 0;
+    padding: max(0.15rem, var(--width-border));
+}
+
+input[type="checkbox"].toggle::before {
+    background-color: currentColor;
+    block-size: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    content: "";
+    flex-shrink: 0;
+    transition: all var(--speed-fast) var(--timing-function-default);
+}
+
+input[type="checkbox"].toggle:checked::before {
+    background-color: var(--color-accent-1);
+    margin-left: 100%;
+    translate: -100%;
+}
+
+input[type="radio"] {
+    align-items: center;
+    appearance: none;
+    block-size: 1.8rem;
+    border: var(--width-border) solid var(--color-border);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    inline-size: 1.8rem;
+    justify-content: center;
+    padding: max(0.15rem, var(--width-border));
+}
+
+input[type="radio"]::before {
+    background-color: var(--color-accent-1);
+    block-size: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    content: "";
+    flex-shrink: 0;
+    transition: all var(--speed-fast) var(--timing-function-default);
+    scale: 0;
+}
+
+input[type="radio"]:checked::before {
+    scale: 1;
+}
+
+input[type="color"] {
+    padding: 0 !important;
+    overflow: clip;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+::file-selector-button,
+.button {
+    align-items: center;
+    appearance: none;
+    background: none;
+    background-color: var(--color-link-1);
+    border: none;
+    border-color: transparent;
+    border-radius: var(--radius-small);
+    color: var(--color-text-button);
+    cursor: pointer;
+    display: flex;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    justify-content: center;
+    min-block-size: 3rem;
+    padding-block: 0.25rem;
+    padding-inline: 1rem;
+    transition: all var(--speed-fast) var(--timing-function-default);
+    gap: 0.25rem;
+}
+
+button:focus-visible,
+button:hover,
+input[type="button"]:focus-visible,
+input[type="button"]:hover,
+input[type="reset"]:focus-visible,
+input[type="reset"]:hover,
+input[type="submit"]:focus-visible,
+input[type="submit"]:hover,
+input[type="file"]:focus-visible::file-selector-button,
+input[type="file"]:hover::file-selector-button,
+.button:focus-visible,
+.button:hover {
+    background-color: var(--color-link-1-hover);
+}
+
+::file-selector-button {
+    display: inline-flex;
+}
+
+
+button.outline,
+input[type="button"].outline,
+input[type="reset"].outline,
+input[type="submit"].outline {
+    background-color: transparent;
+    border: var(--width-border) solid currentColor;
+    color: var(--color-link-1);
+}
+
+button.outline:focus-visible,
+button.outline:hover,
+input[type="button"].outline:focus-visible,
+input[type="button"].outline:hover,
+input[type="reset"].outline:focus-visible,
+input[type="reset"].outline:hover,
+input[type="submit"].outline:focus-visible,
+input[type="submit"].outline:hover {
+    background-color: var(--color-link-1-hover);
+    border-color: var(--color-link-1-hover);
+    color: var(--color-text-button);
+}
+
+button.secondary,
+input[type="button"].secondary,
+input[type="reset"].secondary,
+input[type="submit"].secondary {
+    background-color: var(--color-link-2);
+}
+
+button.secondary:focus-visible,
+button.secondary:hover,
+input[type="button"].secondary:focus-visible,
+input[type="button"].secondary:hover,
+input[type="reset"].secondary:focus-visible,
+input[type="reset"].secondary:hover,
+input[type="submit"].secondary:focus-visible,
+input[type="submit"].secondary:hover {
+    background-color: var(--color-link-2-hover);
+}
+
+button.transparent {
+    background-color: transparent;
+    color: inherit;
+}
+
+button.link {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    color: var(--color-link-1);
+    display: inline;
+    font-weight: var(--font-1-weight-normal);
+    inline-size: auto;
+    min-block-size: 0;
+    padding: 0;
+    text-align: inherit;
+}
+
+button.link:focus-visible,
+button.link:hover {
+    text-decoration: underline;
+}
+
+button[disabled],
+input[type="button"][disabled],
+input[type="reset"][disabled],
+input[type="submit"][disabled],
+input[disabled] ::file-selector-button {
+    background-color: transparent;
+    color: currentColor;
+    cursor: not-allowed;
+}
+
+select {
+    appearance: none;
+    background-color: transparent;
+    background-image: conic-gradient(from -40deg, currentColor 80deg, transparent 80deg);
+    background-position: calc(100% - 1rem) calc(50% + 0.25rem);
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+    block-size: 3rem;
+    border: var(--width-border) solid var(--color-border);
+    border-radius: var(--radius-small);
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    inline-size: 100%;
+    max-inline-size: 100%;
+    padding-inline: 1rem 3rem;
+}
+
+select:focus {
+    background-image: conic-gradient(from 140deg, currentColor 80deg, transparent 80deg);
+    background-position: calc(100% - 1rem) calc(50% - 0.25rem);
+}
+
+progress {
+    appearance: none;
+    block-size: 0.75rem;
+    border: none;
+    background-color: var(--color-background-1);
+    border-radius: 100vmax;
+    inline-size: auto;
+}
+
+progress::-webkit-progress-bar {
+    background-color: transparent;
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--color-accent-1);
+    border-radius: 100vmax;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--color-accent-1);
+    border-radius: 100vmax;
+}
+
+meter {
+    -moz-appearance: none;
+    block-size: 0.75rem;
+    border: none;
+    background: var(--color-background-1);
+    border-radius: 100vmax;
+    inline-size: auto;
+}
+
+meter::-webkit-meter-bar {
+    background-color: transparent;
+    border: none;
+}
+
+meter::-webkit-meter-inner-element {
+    display: block;
+}
+
+meter::-moz-meter-bar {
+    background: var(--color-accent-1);
+    border-radius: 100vmax;
+    transition: all var(--speed-fast) var(--timing-function-default);
+    transform-origin: 0 50%;
+    animation: var(--speed-fast) var(--timing-function-default) 0s backwards scale-up;
+}
+
+meter::-webkit-meter-optimum-value,
+meter::-webkit-meter-suboptimum-value,
+meter::-webkit-meter-even-less-good-value {
+    background: var(--color-accent-1);
+    border-radius: 100vmax;
+    transition: all var(--speed-fast) var(--timing-function-default);
+    transform-origin: 0 50%;
+    animation: var(--speed-fast) var(--timing-function-default) 0s backwards scale-up;
+}
+
+input[type="range"],
+meter,
+progress {
+    inline-size: 100%;
+}
+
+label {
+    cursor: pointer;
+}
+
+.input-wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-block-start: 1rem;
+}
+
+dialog[open] {
+    animation: var(--speed-fast) var(--timing-function-default) 0s backwards scale-up;
+    background-color: transparent;
+    border: none;
+    border-radius: var(--radius-medium);
+    color: inherit;
+    inset: 0;
+    max-block-size: 100%;
+    max-inline-size: 100%;
+    overflow: visible;
+    padding: 0;
+    position: fixed;
+}
+
+dialog>* {
+    background-color: var(--color-background-modal);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-modal);
+    display: grid;
+    padding: var(--size-medium);
+    position: relative;
+    max-block-size: 100vh;
+    overflow: auto;
+}
+
+.hiding {
+    animation-name: scale-down !important;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    accent-color: var(--color-accent-1);
+    align-items: center;
+    background-color: var(--color-background-1);
+    display: flex;
+    font-family: var(--font-1-family);
+    font-weight: var(--font-1-weight-normal);
+    line-height: var(--line-height);
+    margin: 0;
+    min-block-size: 100vh;
+    padding-inline: var(--size-medium);
+    padding-block: 1.5rem 4rem;
+}
+
+main {
+    display: grid;
+    inline-size: 100%;
+    max-inline-size: 100rem;
+    margin-inline: auto;
+    gap: var(--size-medium);
+}
+
+h1 {
+    font-family: var(--font-2-family);
+    font-weight: var(--font-2-weight-bold);
+    font-size: 1.75rem;
+}
+
+section>* {
+    animation: var(--speed-medium) var(--timing-function-default) 0s backwards scale-up;
+}
+
+section>*:nth-child(2) {
+    animation-delay: calc(0.5 * var(--speed-fast));
+}
+
+section>*:nth-child(3) {
+    animation-delay: calc(1 * var(--speed-fast));
+}
+
+section>*:nth-child(4) {
+    animation-delay: calc(1.5 * var(--speed-fast));
+}
+
+section>*:nth-child(5) {
+    animation-delay: calc(2 * var(--speed-fast));
+}
+
+section>*:nth-child(6) {
+    animation-delay: calc(2.5 * var(--speed-fast));
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tags a {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    background-color: var(--color-background-2);
+    padding: 0.5rem;
+    border-radius: var(--radius-small);
+    transition: all var(--speed-fast) var(--timing-function-default);
+}
+
+.tags a:focus,
+.tags a:hover {
+    color: var(--color-text-button);
+    background-color: var(--color-link-1-hover);
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+    gap: var(--size-medium);
+    margin-block-start: var(--size-medium);
+}
+
+.collections>div {
+    background-color: var(--color-background-2);
+    padding: var(--size-small);
+    border-radius: var(--radius-large);
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: calc(0.75 * var(--size-small));
+}
+
+.collections div header {
+    grid-area: 1 / 1 / 2 / 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.collections div header h2 {
+    font-size: 1.25rem;
+}
+
+.collections div header div {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.collections div a {
+    display: flex;
+    border-radius: var(--radius-medium);
+    overflow: clip;
+}
+
+.collections div img {
+    inline-size: 100%;
+    transition: all var(--speed-medium) var(--timing-function-default);
+    scale: 1;
+    background-color: #888;
+    color: var(--color-text-1);
+}
+
+.collections div img:hover {
+    scale: 1.25;
+}
+
+.collections div a:first-of-type {
+    grid-area: 2 / 1 / 3 / 4;
+}
+
+#settings-modal {
+    inline-size: 100%;
+    max-inline-size: 30rem;
+}
+
+#settings-modal h2 {
+    text-transform: capitalize;
+}
+
+#settings-modal p {
+    margin: 0;
+    text-transform: capitalize;
+}
+
+#settings-modal label {
+    display: block;
+    margin-block: 1.5rem 0.5rem;
+    text-transform: capitalize;
+}
+
+.settings-open-button {
+    align-items: center;
+    background-color: var(--color-background-1);
+    block-size: 3rem;
+    border: var(--width-border) solid transparent;
+    color: inherit;
+    gap: 0;
+    inline-size: auto;
+    inset-block-end: 0.5rem;
+    inset-inline-start: 0.5rem;
+    justify-content: start;
+    max-inline-size: 3rem;
+    min-inline-size: 3rem;
+    overflow: clip;
+    padding: 0;
+    position: fixed;
+    transition-duration: var(--speed-medium);
+}
+
+.settings-open-button:focus-visible,
+.settings-open-button:hover {
+    background-color: var(--color-background-1);
+    border-color: currentColor;
+    max-inline-size: 100%;
+}
+
+.settings-open-button span {
+    margin-inline: -0.4rem 0.75rem;
+    padding-inline-start: 0.25rem;
+    text-transform: capitalize;
+}
+
+.settings-open-button svg {
+    flex-shrink: 0;
+    margin-inline: 0.75rem;
+}
+
+.settings-open-button svg,
+.close-button svg {
+    block-size: auto;
+    inline-size: 1.5rem;
+}
+
+.close-button {
+    background-color: transparent;
+    block-size: 3rem;
+    border-radius: 100vmax;
+    color: inherit;
+    inline-size: 3rem;
+    inset-block-start: 0.4rem;
+    inset-inline-end: 0.4rem;
+    padding: 0;
+    position: absolute;
+}
+
+.close-button:focus-visible,
+.close-button:hover {
+    color: var(--color-background-modal);
+}
+
+#settings-hue-wrapper {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+}
+
+#settings-hue {
+    -webkit-appearance: none;
+    background-image: linear-gradient(to right, oklch(var(--l) var(--c) 0), oklch(var(--l) var(--c) 90), oklch(var(--l) var(--c) 180), oklch(var(--l) var(--c) 270), oklch(var(--l) var(--c) 360));
+    block-size: 1.8rem;
+    border: none;
+    border-radius: var(--radius-small);
+    color: inherit;
+    cursor: crosshair;
+    display: flex;
+    margin-inline: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+#settings-hue::-moz-range-thumb {
+    background: transparent;
+    border: var(--width-border) solid currentColor;
+    border-radius: 1rem;
+    box-sizing: content-box;
+    cursor: pointer;
+    height: 1.8rem;
+    width: var(--radius-small);
+}
+
+#settings-hue::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: transparent;
+    border: var(--width-border) solid currentColor;
+    border-radius: 1rem;
+    box-sizing: content-box;
+    cursor: pointer;
+    height: 1.8rem;
+    width: var(--width-border);
+}
+
+#settings-hue::-ms-thumb {
+    background: transparent;
+    border: var(--width-border) solid currentColor;
+    border-radius: 1rem;
+    box-sizing: content-box;
+    cursor: pointer;
+    height: 1.8rem;
+    width: var(--width-border);
+}
+
+#settings-hue-preview {
+    background-color: var(--color-accent-1);
+    block-size: 1.8rem;
+    border-radius: 50%;
+    display: flex;
+    flex-shrink: 0;
+    inline-size: 1.8rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 1ms !important;
+        transition-duration: 1ms !important;
+    }
+}
+
+@keyframes scale-up {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-down {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes from-top {
+    from {
+        transform: translateY(-100vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes from-bottom {
+    from {
+        transform: translateY(100vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes from-left {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes from-right {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media (min-width: 40rem) {}

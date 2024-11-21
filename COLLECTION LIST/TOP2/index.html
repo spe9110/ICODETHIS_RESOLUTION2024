@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-js-enabled="false">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles.css">
+        <title>Collection list</title>
+		<script>
+			document.documentElement.setAttribute("data-js-enabled", "true");
+		</script>
+		<style>
+			[data-js-enabled="true"]:not([data-content-loaded]) body {
+				background: #000 !important;
+			}
+			[data-js-enabled="true"]:not([data-content-loaded]) body > * {
+				display: none !important;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<a class="visually-hidden skip-link" href="#main">Skip to content</a>
+		<main id="main" tabindex="-1">
+			<h1>Popular Collections</h1>
+			<section class="tags">
+				<a href="javascript:void(0)">Profile</a>
+				<a href="javascript:void(0)">New York</a>
+				<a href="javascript:void(0)">Relaxing</a>
+				<a href="javascript:void(0)">Person</a>
+				<a href="javascript:void(0)">Fashion</a>
+			</section>
+			<section class="collections">
+				<div id="people">
+					<header>
+						<h2>People</h2>
+						<div>
+							<svg class="icon" width="24" height="24" aria-hidden="true"><use href="#icon-photo" /></svg>
+							<span>144</span><span class="visually-hidden"> photos</span>
+						</div>
+					</header>
+					<a href="javascript:void(0)"><img width="800" height="600" alt="random photo" src="https://source.unsplash.com/800x600/?people,1"></a>
+					<a href="javascript:void(0)"><img width="400" height="300" alt="random photo" src="https://source.unsplash.com/400x300/?people,2"></a>
+					<a href="javascript:void(0)"><img width="400" height="300" alt="random photo" src="https://source.unsplash.com/400x300/?people,3"></a>
+					<a href="javascript:void(0)"><img width="400" height="300" alt="random photo" src="https://source.unsplash.com/400x300/?people,4"></a>
+				</div>
+				<div id="nature">
+					<header>
+						<h2>Nature</h2>
+						<div>
+							<svg class="icon" width="24" height="24" aria-hidden="true"><use href="#icon-photo" /></svg>
+							<span>7283</span><span class="visually-hidden"> photos</span>
+						</div>
+					</header>
+					<a href="javascript:void(0)"><img width="800" height="600" alt="random photo" src="https://source.unsplash.com/800x600/?nature,1"></a>
+					<a href="javascript:void(0)"><img width="400" height="300" alt="random photo" src="https://source.unsplash.com/400x300/?nature,2"></a>
+					<a href="javascript:void(0)"><img width="400" height="300" alt="random photo" src="https://source.unsplash.com/400x300/?nature,3"></a>
+					<a href="javascript:void(0)"><img width="400" height="300" alt="random photo" src="https://source.unsplash.com/400x300/?nature,4"></a>
+				</div>
+				<div id="history">
+					<header>
+						<h2>History</h2>
+						<div>
+							<svg class="icon" width="24" height="24" aria-hidden="true"><use href="#icon-photo" /></svg>
+							<span>431</span><span class="visually-hidden"> photos</span>
+						</div>
+					</header>
+					<a href="javascript:void(0)"><img width="800" height="600" alt="random photo" src="https://source.unsplash.com/800x600/?architecture,1"></a>
+					<a href="javascript:void(0)"><img width="400" height="300" alt="random photo" src="https://source.unsplash.com/400x300/?architecture,2"></a>
+					<a href="javascript:void(0)"><img width="400" height="300" alt="random photo" src="https://source.unsplash.com/400x300/?architecture,3"></a>
+					<a href="javascript:void(0)"><img width="400" height="300" alt="random photo" src="https://source.unsplash.com/400x300/?architecture,4"></a>
+				</div>
+			</section>
+		</main>
+		<dialog id="settings-modal" aria-labelledby="settings-title">
+			<form>
+				<button class="close-button" formmethod="dialog">
+					<svg class="icon" width="24" height="24" aria-hidden="true"><use href="#icon-x" /></svg>
+					<span class="visually-hidden">close</span>
+				</button>
+				<h2 id="settings-title" class="settings-title">settings</h2>
+				<label for="settings-darkmode">dark mode</label>
+				<input id="settings-darkmode" class="toggle" type="checkbox" />
+				<label for="settings-hue">accent color</label>
+				<div id="settings-hue-wrapper">
+					<div id="settings-hue-preview"></div>
+					<input id="settings-hue" type="range" min="0" max="360" />
+				</div>
+			</form>
+		</dialog>
+		<svg width="0" height="0">
+			<filter id="filter-displacement">
+				<feTurbulence type="turbulence" baseFrequency="0.015" numOctaves="1" result="turbulence" />
+				<feDisplacementMap in2="turbulence" in="SourceGraphic" scale="12" xChannelSelector="R" yChannelSelector="G" />
+			</filter>
+			<filter id="filter-noise">
+				<feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+			</filter>
+			<filter id="filter-rgb-split">
+				<feFlood flood-color="#f00" flood-opacity="0.5" result="r" />
+				<feFlood flood-color="#0f0" flood-opacity="0.5" result="g" />
+				<feFlood flood-color="#00f" flood-opacity="0.5" result="b" />
+				<feComposite operator="in" in="r" in2="SourceAlpha" result="rt" />
+				<feComposite operator="in" in="g" in2="SourceAlpha" result="gt" />
+				<feComposite operator="in" in="b" in2="SourceAlpha" result="bt" />
+				<feOffset in="rt" dx="-3" dy="0" result="rto" />
+				<feOffset in="gt" dx="3" dy="0" result="gto" />
+				<feOffset in="bt" dx="0" dy="0" result="bto" />
+				<feMerge>
+					<feMergeNode in="rto" />
+					<feMergeNode in="gto" />
+					<feMergeNode in="bto" />
+				</feMerge>
+			</filter>
+			<symbol id="icon-adjustments" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M4 10a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+				<path d="M6 4v4" />
+				<path d="M6 12v8" />
+				<path d="M10 16a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+				<path d="M12 4v10" />
+				<path d="M12 18v2" />
+				<path d="M16 7a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+				<path d="M18 4v1" />
+				<path d="M18 9v11" />
+			</symbol>
+			<symbol id="icon-address-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M20 6v12a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2z" />
+				<path d="M10 16h6" />
+				<path d="M13 11m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+				<path d="M4 8h3" />
+				<path d="M4 12h3" />
+				<path d="M4 16h3" />
+			</symbol>
+			<symbol id="icon-arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M12 5l0 14" />
+				<path d="M18 13l-6 6" />
+				<path d="M6 13l6 6" />
+			</symbol>
+			<symbol id="icon-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M5 12l14 0" />
+				<path d="M5 12l6 6" />
+				<path d="M5 12l6 -6" />
+			</symbol>
+			<symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M5 12l14 0" />
+				<path d="M13 18l6 -6" />
+				<path d="M13 6l6 6" />
+			</symbol>
+			<symbol id="icon-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M12 5l0 14" />
+				<path d="M18 11l-6 -6" />
+				<path d="M6 11l6 -6" />
+			</symbol>
+			<symbol id="icon-arrows-maximize" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M16 4l4 0l0 4" />
+				<path d="M14 10l6 -6" />
+				<path d="M8 20l-4 0l0 -4" />
+				<path d="M4 20l6 -6" />
+				<path d="M16 20l4 0l0 -4" />
+				<path d="M14 14l6 6" />
+				<path d="M8 4l-4 0l0 4" />
+				<path d="M4 4l6 6" />
+			</symbol>
+			<symbol id="icon-arrows-minimize" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M5 9l4 0l0 -4" />
+				<path d="M3 3l6 6" />
+				<path d="M5 15l4 0l0 4" />
+				<path d="M3 21l6 -6" />
+				<path d="M19 9l-4 0l0 -4" />
+				<path d="M15 9l6 -6" />
+				<path d="M19 15l-4 0l0 4" />
+				<path d="M15 15l6 6" />
+			</symbol>
+			<symbol id="icon-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+				<path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+			</symbol>
+			<symbol id="icon-dots" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+				<path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+				<path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+			</symbol>
+			<symbol id="icon-dots-vertical" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+				<path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+				<path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+			</symbol>
+			<symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+			</symbol>
+			<symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+				<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+				<path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+			</symbol>
+			<symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+				<path d="M3 7l9 6l9 -6" />
+			</symbol>
+			<symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+				<path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+			</symbol>
+			<symbol id="icon-menu-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M4 6l16 0" />
+				<path d="M4 12l16 0" />
+				<path d="M4 18l16 0" />
+			</symbol>
+			<symbol id="icon-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M5 12l14 0" />
+			</symbol>
+			<symbol id="icon-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+				<path d="M13.5 6.5l4 4" />
+			</symbol>
+			<symbol id="icon-photo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M15 8h.01" />
+				<path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z" />
+				<path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" />
+				<path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" />
+			</symbol>
+			<symbol id="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M12 5l0 14" />
+				<path d="M5 12l14 0" />
+			</symbol>
+			<symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+				<path d="M21 21l-6 -6" />
+			</symbol>
+			<symbol id="icon-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M10 14l11 -11" />
+				<path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" />
+			</symbol>
+			<symbol id="icon-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+				<path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+				<path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+				<path d="M8.7 10.7l6.6 -3.4" />
+				<path d="M8.7 13.3l6.6 3.4" />
+			</symbol>
+			<symbol id="icon-shevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M6 9l6 6l6 -6" />
+			</symbol>
+			<symbol id="icon-shevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M15 6l-6 6l6 6" />
+			</symbol>
+			<symbol id="icon-shevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M9 6l6 6l-6 6" />
+			</symbol>
+			<symbol id="icon-shevron-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M6 15l6 -6l6 6" />
+			</symbol>
+			<symbol id="icon-shopping-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" />
+				<path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+			</symbol>
+			<symbol id="icon-shopping-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+				<path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+				<path d="M17 17h-11v-14h-2" />
+				<path d="M6 5l14 1l-1 7h-13" />
+			</symbol>
+			<symbol id="icon-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+			</symbol>
+			<symbol id="icon-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M4 7l16 0" />
+				<path d="M10 11l0 6" />
+				<path d="M14 11l0 6" />
+				<path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+				<path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+			</symbol>
+			<symbol id="icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M18 6l-12 12" />
+				<path d="M6 6l12 12" />
+			</symbol>
+		</svg>
+		<script src="index.js"></script>
+	</body>
+</html>
