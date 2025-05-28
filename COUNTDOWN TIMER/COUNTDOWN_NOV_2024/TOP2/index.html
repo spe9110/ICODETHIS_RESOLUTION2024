@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="custom-cursor"></div>
+<div id="cursor-trail"></div>
+<div class="scan-line"></div>
+<div class="noise"></div>
+<div id="particles"></div>
+<div class="binary-rain"></div>
+<div class="circle-loader">
+    <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(0,255,255,0.1)" stroke-width="0.5" />
+        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,0,255,0.1)" stroke-width="0.5" />
+        <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(0,255,255,0.1)" stroke-width="0.5" />
+        <text x="50" y="50" text-anchor="middle" dy=".3em" fill="rgba(0,255,255,0.3)" font-size="4">QUANTUM
+            SYNC</text>
+    </svg>
+</div>
+<div class="power-button">
+    <div class="power-icon"></div>
+</div>
+<div class="container">
+    <h1 data-text="QUANTUM NEXUS">QUANTUM NEXUS</h1>
+    <div class="target-date">31 / 12 / 2024</div>
+    <div class="countdown">
+        <div class="countdown-item">
+            <div class="countdown-value" id="days">00</div>
+            <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-item">
+            <div class="countdown-value" id="hours">00</div>
+            <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-item">
+            <div class="countdown-value" id="minutes">00</div>
+            <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+            <div class="countdown-value" id="seconds">00</div>
+            <div class="countdown-label">Seconds</div>
+        </div>
+    </div>
+    <div class="description">
+        Prepare for the awakening of the Quantum Nexus, where reality itself bends
+        to the will of cosmic forces. As dimensions converge and time folds upon itself,
+        witness the birth of a new universal consciousness.
+    </div>
+</div>
+<script src="./index.js"></script>
+</body>
+</html>
